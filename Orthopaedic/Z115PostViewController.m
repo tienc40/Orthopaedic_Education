@@ -128,7 +128,6 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.delegate = self;
-    [self.webView.scrollView setContentSize: CGSizeMake(self.webView.frame.size.width, self.webView.scrollView.contentSize.height)];
     
     for (UIView *view in [self.webView.scrollView subviews])
     {
@@ -202,7 +201,6 @@
     }
     else if (self.postUrl)
     {
-        NSLog(@"@Load Url");
         [[Z115WordPressAPIClient sharedClient] loadFromPostUrl:self.postUrl
                                                  withSuccess:^(Z115WordPressPost *post) {
                                                      self.post = post;
@@ -215,7 +213,6 @@
     }
     else
     {
-        NSLog(@"Load From ID");
         [[Z115WordPressAPIClient sharedClient] loadFromPostId:self.postId
                                                 withSuccess:^(Z115WordPressPost *post) {
                                                     self.post = post;
