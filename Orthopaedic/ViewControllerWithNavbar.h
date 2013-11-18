@@ -9,4 +9,5 @@
 #import <UIKit/UIKit.h>
 #import "TableMenu.h"
 @interface ViewControllerWithNavbar : UIViewController <TableMenuDelegate>
+@property (strong) TableMenu* tableMenu;
 @end
