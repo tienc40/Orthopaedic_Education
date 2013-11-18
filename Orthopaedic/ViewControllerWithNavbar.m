@@ -88,8 +88,6 @@
         UIBarButtonItem *categoryMenu =[[UIBarButtonItem alloc] initWithCustomView:_categoryButton];
         
         
-        
-        
         // btn search
         _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, 50.0f, 44.0f)];
         [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];

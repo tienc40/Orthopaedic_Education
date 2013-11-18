@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Z115WordPress : NSObject
-
+@property (assign, nonatomic) BOOL fullScreen;
++ (Z115WordPress *)sharedInstance;
 @end
