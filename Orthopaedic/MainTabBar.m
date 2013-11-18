@@ -9,6 +9,7 @@
 #import "MainTabBar.h"
 #import "AppDelegate.h"
 #import "Z115PostListViewController.h"
+#import "ViewControllerWithNavbar.h"
 @interface MainTabBar ()
 {
     UIButton* centerItem;
@@ -110,8 +111,14 @@
 #pragma button action
 - (void) itemCenterAction
 {
-    [self setSelectedIndex:2];
-
+    //[self setSelectedIndex:2];
+    for (UINavigationController *view in self.viewControllers) {
+        if ([view.viewControllers[0] isKindOfClass:[Z115PostListViewController class]]) {
+            ((Z115PostListViewController*)view.viewControllers[0]).tableMenu.hidden = YES;
+        }
+    }
+    [self setSelectedViewController:self.viewControllers[2]];
+    
 }
 
 @end

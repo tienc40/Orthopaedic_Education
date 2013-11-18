@@ -30,6 +30,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
     }
     return self;
 }
@@ -65,7 +66,7 @@
     _tableMenu.menuDelegate = self;
     [self resetBarItem];
 //    self.navigationItem.leftBarButtonItem = categoryMenu;
-    self.tabBarController.delegate = self;
+
 }
 
 - (void) viewDidAppear:(BOOL)animated

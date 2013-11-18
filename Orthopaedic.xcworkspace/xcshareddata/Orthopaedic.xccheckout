@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>21AF18EB-93B8-4682-9BE2-36E059FB2222</string>
+	<string>17580A1F-F785-4C7F-A34E-C2F1C8FD0262</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Orthopaedic</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>B443BDF6-EF8D-4D98-9B18-AED1CD37D12F</key>
-		<string>https://github.com/tienc40/Orthopaedic.git</string>
+		<key>E9626AEF-E2F3-4BDE-B9A3-9729192DC32A</key>
+		<string>https://github.com/tienc40/Orthopaedic_Education.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Orthopaedic.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>B443BDF6-EF8D-4D98-9B18-AED1CD37D12F</key>
+		<key>E9626AEF-E2F3-4BDE-B9A3-9729192DC32A</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/tienc40/Orthopaedic.git</string>
+	<string>https://github.com/tienc40/Orthopaedic_Education.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>B443BDF6-EF8D-4D98-9B18-AED1CD37D12F</string>
+	<string>E9626AEF-E2F3-4BDE-B9A3-9729192DC32A</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>B443BDF6-EF8D-4D98-9B18-AED1CD37D12F</string>
+			<string>E9626AEF-E2F3-4BDE-B9A3-9729192DC32A</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Orthopaedic</string>
+			<string>Orthopaedic_Education</string>
 		</dict>
 	</array>
 </dict>
