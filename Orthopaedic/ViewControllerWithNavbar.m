@@ -78,7 +78,7 @@
 {
     [UIView animateWithDuration:0.4 animations:^{
         // title menu
-        self.navigationItem.title = @"abchashahhash";
+        self.navigationItem.title = @"Latest Posts";
         
         // category menu
         if (!_categoryButton) {
