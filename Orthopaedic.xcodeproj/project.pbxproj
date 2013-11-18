@@ -208,6 +208,7 @@
 		4B5F3AD51837FA120096A4B3 /* ViewControllerWithNavbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewControllerWithNavbar.h; sourceTree = "<group>"; };
 		4B5F3AD61837FA120096A4B3 /* ViewControllerWithNavbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerWithNavbar.m; sourceTree = "<group>"; };
 		4B5F3AD91837FA810096A4B3 /* menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menu.plist; sourceTree = "<group>"; };
+		4BC8E6A418390CA40050761D /* PT Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Sans.ttf"; sourceTree = "<group>"; };
 		4BCD31CB183904B4007343FF /* categoryMenubtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = categoryMenubtn.png; sourceTree = "<group>"; };
 		4BCD31CC183904B4007343FF /* iconTab2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTab2.png; sourceTree = "<group>"; };
 		4BCD31CD183904B4007343FF /* info_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_s.png; sourceTree = "<group>"; };
@@ -488,6 +489,7 @@
 		4B5F3AB41837F7480096A4B3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4BC8E6A418390CA40050761D /* PT Sans.ttf */,
 				4BCD31CB183904B4007343FF /* categoryMenubtn.png */,
 				4BCD31CC183904B4007343FF /* iconTab2.png */,
 				4BCD31CD183904B4007343FF /* info_s.png */,

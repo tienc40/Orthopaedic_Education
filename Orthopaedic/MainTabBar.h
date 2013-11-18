@@ -7,6 +7,6 @@
 //
 
 
-@interface MainTabBar : UITabBarController <UITabBarControllerDelegate>
+@interface MainTabBar : UITabBarController 
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import "MainTabBar.h"
-
+#import "AppDelegate.h"
+#import "Z115PostListViewController.h"
 @interface MainTabBar ()
 {
     UIButton* centerItem;
@@ -28,9 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     self.tabBarController.navigationItem.title = @"";
-    
-    
     // Change the tab bar background
     UIImage *tabBarBackground = [UIImage imageNamed:@"barbg.png"];
     [[UITabBar appearance] setBackgroundImage:tabBarBackground];
@@ -39,18 +39,27 @@
     
     UITabBar *tabBar = self.tabBar;
     UITabBarItem *tabBarItem1 = [tabBar.items objectAtIndex:0];
-    
     UITabBarItem *tabBarItem2 = [tabBar.items objectAtIndex:1];
     UITabBarItem *tabBarItem3 = [tabBar.items objectAtIndex:2];
     UITabBarItem *tabBarItem4 = [tabBar.items objectAtIndex:3];
     UITabBarItem *tabBarItem5 = [tabBar.items objectAtIndex:4];
     
-    
     tabBarItem1.title = @"";
+    tabBarItem1.imageInsets = UIEdgeInsetsMake(6, -2, -6, 0);
+    
+    
     tabBarItem2.title = @"";
+    tabBarItem2.imageInsets = UIEdgeInsetsMake(6, -6, -6, 0);
+    
+    
     tabBarItem3.title = @"";
+
     tabBarItem4.title = @"";
+    tabBarItem4.imageInsets = UIEdgeInsetsMake(6, 0, -6, -6);
+    
     tabBarItem5.title = @"";
+    tabBarItem5.imageInsets = UIEdgeInsetsMake(6, 0, -6, -6);
+    
     
 //    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
     
@@ -63,9 +72,9 @@
     
     [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"setting_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting.png"]];
     [tabBarItem5 setFinishedSelectedImage:[UIImage imageNamed:@"message_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"message.png"]];
-
     
-    self.delegate = self;
+    
+//    self.delegate = self;
 //    [self addCenterButtonWithImage:[UIImage imageNamed:@"icon3.png"] highlightImage:[UIImage imageNamed:@"icon3_selected.png"]];
 }
 
@@ -98,18 +107,11 @@
     [self.view addSubview:centerItem];
 }
 
-#pragma uitabbardelegate
-
--(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
-{
-    [centerItem setImage:[UIImage imageNamed:@"iconTab2.png"] forState:UIControlStateNormal];
-}
-
 #pragma button action
 - (void) itemCenterAction
 {
     [self setSelectedIndex:2];
-    [centerItem setImage:[UIImage imageNamed:@"iconTab2.png"] forState:UIControlStateNormal];
+
 }
 
 @end

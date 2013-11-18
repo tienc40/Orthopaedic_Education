@@ -8,17 +8,21 @@
 
 #import "ViewControllerWithNavbar.h"
 #import "TableMenu.h"
+#import "MainTabBar.h"
+#define MENU_WIDTH 50
 
 @interface ViewControllerWithNavbar ()<UISearchBarDelegate>
 {
     UIButton *_searchBtn;
     UIButton *_categoryButton;
     UISearchBar *_searchBar;
-    TableMenu *_tableMenu;
     int _paddingWith;
     UIBarButtonItem *_negativeSpacer;
+    int _marginSearchbar;
 }
+
 @end
+
 
 @implementation ViewControllerWithNavbar
 
@@ -26,7 +30,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -34,14 +37,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7)
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         _paddingWith = 16;
-        
+        _marginSearchbar = 10;
     }else{
         _paddingWith = 5;
+        _marginSearchbar = 30;
     }
     
     _negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
@@ -50,7 +53,7 @@
     
     
     //Search
-    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width/2, 30)];
+    _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 2*MENU_WIDTH-_marginSearchbar, 30)];
     _searchBar.delegate = self;
     _searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [_searchBar setBackgroundImage:[UIImage imageNamed:@"mainnavbg.png"]];
@@ -62,7 +65,7 @@
     _tableMenu.menuDelegate = self;
     [self resetBarItem];
 //    self.navigationItem.leftBarButtonItem = categoryMenu;
-
+    self.tabBarController.delegate = self;
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -79,7 +82,7 @@
         
         // category menu
         if (!_categoryButton) {
-            _categoryButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 50.0f, 44.0f)];
+            _categoryButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
         }
 
         [_categoryButton setImage:[UIImage imageNamed:@"categoryMenubtn.png"]  forState:UIControlStateNormal];
@@ -91,7 +94,7 @@
         
         
         // btn search
-        _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, 50.0f, 44.0f)];
+        _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
         [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
         [_searchBtn addTarget:self action:@selector(searchBtnAction) forControlEvents:UIControlEventTouchUpInside];
         
@@ -124,7 +127,13 @@
 
 - (void) searchBtnAction{
     [UIView animateWithDuration:0.4 animations:^{
-        UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc] initWithTitle:@"close" style:UIBarButtonItemStyleDone target:self action:@selector(closeSearch)];
+        UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        closeBtn.frame = CGRectMake(0, 0, MENU_WIDTH, 40);
+        [closeBtn addTarget:self action:@selector(closeSearch) forControlEvents:UIControlEventTouchUpInside];
+        [closeBtn setTitle:@"close" forState:UIControlStateNormal];
+        
+        UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc]initWithCustomView:closeBtn];
+        
         UIBarButtonItem *sb = [[UIBarButtonItem alloc] initWithCustomView:_searchBar];
         
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,closeBarBtn,sb, nil];
