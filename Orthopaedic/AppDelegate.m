@@ -7,13 +7,15 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewControllerWithNavbar.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
+    UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
+    tabController.delegate = self;
     return YES;
 }
 							
@@ -43,5 +45,14 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+-(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+
+    NSLog(@"hello world");
+
+}
+
+
 
 @end

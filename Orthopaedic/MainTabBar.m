@@ -9,6 +9,7 @@
 #import "MainTabBar.h"
 #import "AppDelegate.h"
 #import "Z115PostListViewController.h"
+#import "ViewControllerWithNavbar.h"
 @interface MainTabBar ()
 {
     UIButton* centerItem;
@@ -49,13 +50,13 @@
     
     
     tabBarItem2.title = @"";
-    tabBarItem2.imageInsets = UIEdgeInsetsMake(6, -6, -6, 0);
+    tabBarItem2.imageInsets = UIEdgeInsetsMake(6, -8, -6, 2);
     
     
     tabBarItem3.title = @"";
 
     tabBarItem4.title = @"";
-    tabBarItem4.imageInsets = UIEdgeInsetsMake(6, 0, -6, -6);
+    tabBarItem4.imageInsets = UIEdgeInsetsMake(6, 2, -6, -8);
     
     tabBarItem5.title = @"";
     tabBarItem5.imageInsets = UIEdgeInsetsMake(6, 0, -6, -6);
@@ -110,8 +111,14 @@
 #pragma button action
 - (void) itemCenterAction
 {
-    [self setSelectedIndex:2];
-
+    //[self setSelectedIndex:2];
+    for (UINavigationController *view in self.viewControllers) {
+        if ([view.viewControllers[0] isKindOfClass:[Z115PostListViewController class]]) {
+            ((Z115PostListViewController*)view.viewControllers[0]).tableMenu.hidden = YES;
+        }
+    }
+    [self setSelectedViewController:self.viewControllers[2]];
+    
 }
 
 @end
