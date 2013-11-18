@@ -29,6 +29,21 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)attachBackSwipe:(UIView *)view
+{
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                action:@selector(back)];
+    
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [view addGestureRecognizer:swipe];
+}
+
+- (void)back
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

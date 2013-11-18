@@ -99,29 +99,52 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
                         <outlet property="tableView" destination="Uw9-VC-INC" id="lYn-uH-MUY"/>
-                        <segue destination="dt6-vX-rlC" kind="push" id="kcf-xC-myS"/>
+                        <segue destination="dt6-vX-rlC" kind="push" identifier="showZ115PostViewController" id="kcf-xC-myS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1592" y="456"/>
         </scene>
-        <!--View Controller - Wordpress Post-->
+        <!--Post View Controller - Wordpress Post-->
         <scene sceneID="ExB-oy-cqi">
             <objects>
-                <viewController id="dt6-vX-rlC" sceneMemberID="viewController">
+                <viewController id="dt6-vX-rlC" customClass="Z115PostViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lZA-Pu-Wvv"/>
                         <viewControllerLayoutGuide type="bottom" id="MUU-nV-Jlt"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="m8Z-5c-bit">
+                    <view key="view" contentMode="scaleToFill" id="m8Z-5c-bit" customClass="Z115PostV">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T8Z-CI-T8T">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHq-FU-E6g">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="dt6-vX-rlC" id="x2k-c8-CXl"/>
+                                        </connections>
+                                    </webView>
+                                </subviews>
+                                <connections>
+                                    <outlet property="delegate" destination="dt6-vX-rlC" id="GdO-oC-hlW"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Wordpress Post" id="AEL-JP-wVi"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="scrollView" destination="T8Z-CI-T8T" id="uh5-L4-RoJ"/>
+                        <outlet property="webView" destination="KHq-FU-E6g" id="ylL-Kx-dSx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRa-PN-lbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

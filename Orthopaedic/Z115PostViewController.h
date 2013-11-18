@@ -18,7 +18,7 @@
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) UIView *loadPreviousView;
 @property (nonatomic, strong) UIView *loadNextView;
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 - (id)initWithPost:(Z115WordPressPost *)post;
 - (id)initWithPostUrl:(NSURL *)url;

@@ -7,6 +7,7 @@
 //
 
 #import "Z115PostListViewController.h"
+#import "Z115PostViewController.h"
 
 #import "TTTAttributedLabel.h"
 #import "NSString+HTML.h"
@@ -274,8 +275,8 @@
         return;
     }
     
-    /* Z115PostViewController *detailViewController = [[Z115PostViewController alloc] initWithDataSource:self.dataSource withStartIndex:indexPath.row];
-    [self.navigationController pushViewController:detailViewController animated:YES]; */
+    Z115PostViewController *postViewController = [[Z115PostViewController alloc] initWithDataSource:self.dataSource withStartIndex:indexPath.row];
+    [self.navigationController pushViewController:postViewController animated:YES];
 
 }
 
@@ -295,7 +296,6 @@
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
     [self.pullToRefreshView startLoading];
-    
     [self loadPosts:NO];
 }
 @end

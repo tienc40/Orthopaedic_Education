@@ -80,6 +80,7 @@
 		B554B2B51839197400F0D0AD /* NetworkPhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */; };
 		B554B2BC18391BB200F0D0AD /* Z115WordPress.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2BB18391BB200F0D0AD /* Z115WordPress.m */; };
 		B58D677E183636C500E77BDD /* Z115WordPressAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B58D677D183636C500E77BDD /* Z115WordPressAPIClient.m */; };
+		B5AC7BAD1839D60100DF420A /* Z115ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC7BAC1839D60100DF420A /* Z115ViewController.m */; };
 		B5B379FD18373D020032688F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B379F418373D020032688F /* Default-568h@2x.png */; };
 		B5B379FE18373D020032688F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B379F518373D020032688F /* Default.png */; };
 		B5B379FF18373D020032688F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B379F618373D020032688F /* Default@2x.png */; };
@@ -123,7 +124,6 @@
 		B5B401D118366F2B004757C9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B401D018366F2B004757C9 /* Security.framework */; };
 		B5B401D318366F32004757C9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B401D218366F32004757C9 /* Social.framework */; };
 		B5B401D518366F3A004757C9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B401D418366F3A004757C9 /* StoreKit.framework */; };
-		B5B401D918367675004757C9 /* Z115ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B401D818367675004757C9 /* Z115ViewController.m */; };
 		B5B401DC1836780A004757C9 /* Z115PostListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B401DB1836780A004757C9 /* Z115PostListViewController.m */; };
 		B5B401E018368016004757C9 /* Z115DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B401DF18368016004757C9 /* Z115DataSource.m */; };
 		B5B401E31836805C004757C9 /* Z115PostListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B401E21836805C004757C9 /* Z115PostListDataSource.m */; };
@@ -353,6 +353,8 @@
 		B554B2C018392D8C00F0D0AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		B58D677C183636C500E77BDD /* Z115WordPressAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115WordPressAPIClient.h; sourceTree = "<group>"; };
 		B58D677D183636C500E77BDD /* Z115WordPressAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPressAPIClient.m; sourceTree = "<group>"; };
+		B5AC7BAB1839D60100DF420A /* Z115ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115ViewController.h; sourceTree = "<group>"; };
+		B5AC7BAC1839D60100DF420A /* Z115ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115ViewController.m; sourceTree = "<group>"; };
 		B5B379F418373D020032688F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		B5B379F518373D020032688F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B5B379F618373D020032688F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -400,8 +402,6 @@
 		B5B401D018366F2B004757C9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B5B401D218366F32004757C9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B5B401D418366F3A004757C9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		B5B401D718367675004757C9 /* Z115ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115ViewController.h; sourceTree = "<group>"; };
-		B5B401D818367675004757C9 /* Z115ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115ViewController.m; sourceTree = "<group>"; };
 		B5B401DA1836780A004757C9 /* Z115PostListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115PostListViewController.h; sourceTree = "<group>"; };
 		B5B401DB1836780A004757C9 /* Z115PostListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115PostListViewController.m; sourceTree = "<group>"; };
 		B5B401DE18368016004757C9 /* Z115DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115DataSource.h; sourceTree = "<group>"; };
@@ -818,17 +818,17 @@
 			children = (
 				B5D82A5E18360D2C00579343 /* ViewController.h */,
 				B5D82A5F18360D2C00579343 /* ViewController.m */,
-				B5B401D718367675004757C9 /* Z115ViewController.h */,
-				B5B401D818367675004757C9 /* Z115ViewController.m */,
 				B5B401DA1836780A004757C9 /* Z115PostListViewController.h */,
 				B5B401DB1836780A004757C9 /* Z115PostListViewController.m */,
 				B532009B18376565007E7C57 /* Z115PostViewController.h */,
 				B532009C18376565007E7C57 /* Z115PostViewController.m */,
-				B53200A21837671F007E7C57 /* Z115WebViewController.m */,
 				B53200A11837671F007E7C57 /* Z115WebViewController.h */,
+				B53200A21837671F007E7C57 /* Z115WebViewController.m */,
 				B53200A31837671F007E7C57 /* Z115WebViewController.xib */,
 				B554B2B31839197400F0D0AD /* NetworkPhotoAlbumViewController.h */,
 				B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */,
+				B5AC7BAB1839D60100DF420A /* Z115ViewController.h */,
+				B5AC7BAC1839D60100DF420A /* Z115ViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1464,7 +1464,6 @@
 				B5B4025918368CF3004757C9 /* TTTAttributedLabel.m in Sources */,
 				B5D82A5A18360D2C00579343 /* AppDelegate.m in Sources */,
 				B5B401E31836805C004757C9 /* Z115PostListDataSource.m in Sources */,
-				B5B401D918367675004757C9 /* Z115ViewController.m in Sources */,
 				B554B2A01839162500F0D0AD /* NIInvocationMethods.m in Sources */,
 				B5B40010183665A6004757C9 /* GRButtons.m in Sources */,
 				B5D82A8C1836128A00579343 /* Z115WordPressPostAttachment.m in Sources */,
@@ -1510,6 +1509,7 @@
 				B554B2B01839162500F0D0AD /* NIPhotoScrollView.m in Sources */,
 				B5B40036183665A6004757C9 /* SSPullToRefreshDefaultContentView.m in Sources */,
 				B554B29F1839162500F0D0AD /* NIInMemoryCache.m in Sources */,
+				B5AC7BAD1839D60100DF420A /* Z115ViewController.m in Sources */,
 				B554B2981839162500F0D0AD /* NICommonMetrics.m in Sources */,
 				B554B2AF1839162500F0D0AD /* NIPhotoAlbumScrollView.m in Sources */,
 			);
