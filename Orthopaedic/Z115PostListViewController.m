@@ -212,7 +212,7 @@
 {
     if (!self.loadingView)
     {
-        /* self.loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, -44, 320, 44)];
+        self.loadingView = [[UIView alloc] initWithFrame:CGRectMake(0, -44, 320, 44)];
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 11, 300, 21)];
         label.text = @"Loading...";
@@ -220,10 +220,12 @@
         label.backgroundColor = [UIColor clearColor];
         
         [self.loadingView addSubview:label];
-        self.loadingView.backgroundColor = [UIColor blackColor];
+        self.loadingView.backgroundColor = [UIColor colorWithRed:34 green:108 blue:64 alpha:1.0];
+        
+
         
         [self.view addSubview:self.loadingView];
-        [self.view bringSubviewToFront:self.loadingView]; */
+        [self.view bringSubviewToFront:self.loadingView];
     }
     
     [self.pullToRefreshView finishLoading];

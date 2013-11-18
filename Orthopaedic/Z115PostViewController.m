@@ -199,9 +199,11 @@
     if (self.post)
     {
         [self loadPost];
+        NSLog(@"Load Post");
     }
     else if (self.postUrl)
     {
+        NSLog(@"@Load Url");
         [[Z115WordPressAPIClient sharedClient] loadFromPostUrl:self.postUrl
                                                  withSuccess:^(Z115WordPressPost *post) {
                                                      self.post = post;
@@ -214,6 +216,7 @@
     }
     else
     {
+        NSLog(@"Load From ID");
         [[Z115WordPressAPIClient sharedClient] loadFromPostId:self.postId
                                                 withSuccess:^(Z115WordPressPost *post) {
                                                     self.post = post;
@@ -229,12 +232,6 @@
                                                                                 action:@selector(pinchAction:)];
     
     [self.webView addGestureRecognizer:pinch];
-    
-    /* UISwipeGestureRecognizer *leftswipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self.buttonControl
-                                                                                    action:@selector(viewComments)];
-    
-    leftswipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    [self.webView addGestureRecognizer:leftswipe];*/
     
     [self attachBackSwipe:self.webView];
     
