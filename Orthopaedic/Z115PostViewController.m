@@ -128,6 +128,7 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.delegate = self;
+    [self.webView.scrollView setContentSize: CGSizeMake(self.webView.frame.size.width, self.webView.scrollView.contentSize.height)];
     
     for (UIView *view in [self.webView.scrollView subviews])
     {
@@ -159,7 +160,6 @@
     self.nextTitleLabel.backgroundColor = [UIColor clearColor];
     self.nextTitleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     self.nextTitleLabel.numberOfLines = 2;
-    self.nextTitleLabel.textAlignment = UITextAlignmentCenter;
     
     [self.loadNextView addSubview:self.nextTitleLabel];
     
@@ -180,7 +180,6 @@
     
     self.previousTitleLabel.font = [UIFont boldSystemFontOfSize:14.0f];
     self.previousTitleLabel.numberOfLines = 2;
-    self.previousTitleLabel.textAlignment = UITextAlignmentCenter;
     
     [self.loadPreviousView addSubview:self.previousTitleLabel];
     
@@ -235,11 +234,6 @@
     
     [self attachBackSwipe:self.webView];
     
-    
-    self.makeCommentButton =  [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"09-chat-2-white.png"]
-                                                               style:UIBarButtonItemStyleBordered
-                                                              target:self
-                                                              action:@selector(showCommentHelp)];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -429,8 +423,8 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
-    self.navigationItem.rightBarButtonItem = ([self.post.commentCount intValue]) ? self.makeCommentButton : nil;
-    
+ 
+
     if ([self canLoadNext])
     {
         self.nextTitleLabel.text = [((Z115WordPressPost *)self.dataSource.items[(self.index - 1)]).titlePlain stringByReplacingHTMLEntities];
