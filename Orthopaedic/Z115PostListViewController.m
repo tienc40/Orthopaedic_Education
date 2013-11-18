@@ -11,6 +11,7 @@
 
 #import "TTTAttributedLabel.h"
 #import "NSString+HTML.h"
+#import "UIColor+Z115WordPress.h"
 
 #import "Z115PullToRefreshContentView.h"
 
@@ -220,8 +221,7 @@
         label.backgroundColor = [UIColor clearColor];
         
         [self.loadingView addSubview:label];
-        self.loadingView.backgroundColor = [UIColor colorWithRed:34 green:108 blue:64 alpha:1.0];
-        
+        self.loadingView.backgroundColor = [UIColor colorWithHexString:@"#226CA4"];
 
         
         [self.view addSubview:self.loadingView];

@@ -211,6 +211,7 @@
 		B5D82A92183612D400579343 /* Z115WordPressImage.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D82A91183612D400579343 /* Z115WordPressImage.m */; };
 		B5D82A9518361CB000579343 /* Z115WordPressPostComment.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D82A9418361CB000579343 /* Z115WordPressPostComment.m */; };
 		B5D82A981836217F00579343 /* Z115WordPressTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D82A971836217F00579343 /* Z115WordPressTag.m */; };
+		B5EA8D5D183A0B9700866A07 /* UIColor+Z115WordPress.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA8D5C183A0B9700866A07 /* UIColor+Z115WordPress.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -531,6 +532,8 @@
 		B5D82A9418361CB000579343 /* Z115WordPressPostComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPressPostComment.m; sourceTree = "<group>"; };
 		B5D82A961836217F00579343 /* Z115WordPressTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115WordPressTag.h; sourceTree = "<group>"; };
 		B5D82A971836217F00579343 /* Z115WordPressTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPressTag.m; sourceTree = "<group>"; };
+		B5EA8D5B183A0B9700866A07 /* UIColor+Z115WordPress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Z115WordPress.h"; sourceTree = "<group>"; };
+		B5EA8D5C183A0B9700866A07 /* UIColor+Z115WordPress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Z115WordPress.m"; sourceTree = "<group>"; };
 		F6E6A79363664438BDDC4E9E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -941,6 +944,8 @@
 			children = (
 				B532009E183765DB007E7C57 /* UIView+Z115WordPress.h */,
 				B532009F183765DB007E7C57 /* UIView+Z115WordPress.m */,
+				B5EA8D5B183A0B9700866A07 /* UIColor+Z115WordPress.h */,
+				B5EA8D5C183A0B9700866A07 /* UIColor+Z115WordPress.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1503,6 +1508,7 @@
 				B5B401B618366E69004757C9 /* AFHTTPRequestOperation.m in Sources */,
 				B5B4003A183665A6004757C9 /* YISplashScreen+Migration.m in Sources */,
 				B554B2A71839162500F0D0AD /* NIRuntimeClassModifications.m in Sources */,
+				B5EA8D5D183A0B9700866A07 /* UIColor+Z115WordPress.m in Sources */,
 				B5D82A5618360D2C00579343 /* main.m in Sources */,
 				B554B2A21839162500F0D0AD /* NINetworkActivity.m in Sources */,
 				B554B2AA1839162500F0D0AD /* NIState.m in Sources */,
