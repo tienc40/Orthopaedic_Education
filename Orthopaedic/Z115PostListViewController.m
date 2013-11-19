@@ -280,6 +280,7 @@
     Z115PostViewController *postViewController = [[Z115PostViewController alloc] initWithDataSource:self.dataSource withStartIndex:indexPath.row];
     [self.navigationController pushViewController:postViewController animated:YES];
 
+
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -300,5 +301,7 @@
     [self.pullToRefreshView startLoading];
     [self loadPosts:NO];
 }
+
+
 @end
 

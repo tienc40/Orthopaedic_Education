@@ -120,7 +120,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+        [self setBackButton];
+   
     self.view.backgroundColor = [UIColor whiteColor];
     
 	// Do any additional setup after loading the view.
@@ -238,6 +240,7 @@
     [self.webView stopLoading];
     
     [super viewWillDisappear:animated];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -534,4 +537,6 @@
     
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"changeFontSize('%f')", self.fontSize]];
 }
+
+
 @end

@@ -108,17 +108,29 @@
     [self.view addSubview:centerItem];
 }
 
+#pragma uit
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+    [self hideAllMenu];
+}
+
 #pragma button action
 - (void) itemCenterAction
 {
     //[self setSelectedIndex:2];
-    for (UINavigationController *view in self.viewControllers) {
-        if ([view.viewControllers[0] isKindOfClass:[Z115PostListViewController class]]) {
-            ((Z115PostListViewController*)view.viewControllers[0]).tableMenu.hidden = YES;
-        }
-    }
+    [self hideAllMenu];
     [self setSelectedViewController:self.viewControllers[2]];
     
 }
+
+- (void) hideAllMenu{
+    for (UINavigationController *view in self.viewControllers) {
+        if ([view.viewControllers[0] isKindOfClass:[ViewControllerWithNavbar class]]) {
+            ((ViewControllerWithNavbar*)view.viewControllers[0]).tableMenu.hidden = YES;
+        }
+    }
+}
+
 
 @end

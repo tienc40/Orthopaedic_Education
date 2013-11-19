@@ -38,10 +38,6 @@
     [view addGestureRecognizer:swipe];
 }
 
-- (void)back
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 
 - (void)didReceiveMemoryWarning

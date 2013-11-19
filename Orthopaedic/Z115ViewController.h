@@ -11,6 +11,4 @@
 @interface Z115ViewController : ViewControllerWithNavbar
 
 - (void)attachBackSwipe:(UIView *)view;
-- (void)back;
-
 @end

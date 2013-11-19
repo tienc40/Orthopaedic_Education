@@ -15,6 +15,7 @@
 {
     UIButton *_searchBtn;
     UIButton *_categoryButton;
+    UIButton *_backBtn;
     UISearchBar *_searchBar;
     int _paddingWith;
     UIBarButtonItem *_negativeSpacer;
@@ -65,6 +66,7 @@
     [self.view addSubview:_tableMenu];
     _tableMenu.menuDelegate = self;
     [self resetBarItem];
+    self.navigationController.delegate = self;
 //    self.navigationItem.leftBarButtonItem = categoryMenu;
 
 }
@@ -72,7 +74,7 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     
-    [self resetBarItem];
+    
 }
 
 - (void) resetBarItem
@@ -93,36 +95,44 @@
         
         
         // btn search
-        _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
+//        if (!_searchBar) {
+            _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
+//        }
+
         [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
         [_searchBtn addTarget:self action:@selector(searchBtnAction) forControlEvents:UIControlEventTouchUpInside];
         
         
         UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithCustomView:_searchBtn];
         
-        
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,categoryMenu,nil];
-        
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,searchItem, nil];
     }];
 }
 
-#pragma mark category action
+#pragma mark leftItem
 
 - (void) categoryBtnAction{
     _tableMenu.hidden = 1-_tableMenu.hidden;
 }
 
-#pragma mark menu delegate
-
-- (void) didSelectItem:(int)rowIndex
+-(void)setBackButton{
+    if (!_backBtn) {
+        _backBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
+    }
+//    [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:_backBtn];
+    [_backBtn setTitle:@"Back" forState:UIControlStateNormal];
+    [_backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,backItem, nil];
+}
+- (void)back
 {
-    _tableMenu.hidden =YES;
-    NSLog(@"%d",rowIndex);
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
-#pragma mark search btn
+#pragma mark right item
 
 - (void) searchBtnAction{
     [UIView animateWithDuration:0.4 animations:^{
@@ -160,7 +170,14 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self resetBarItem];
+}
+#pragma mark menu delegate
 
+- (void) didSelectItem:(int)rowIndex
+{
+    self.tableMenu.hidden =YES;
+    [self.tabBarController setSelectedIndex:2];
+    NSLog(@"%d",rowIndex);
 }
 
 @end
