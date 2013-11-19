@@ -114,9 +114,9 @@
 #pragma mark leftItem
 
 - (void) categoryBtnAction{
-    _tableMenu.hidden = 1-_tableMenu.hidden;
+     _tableMenu.hidden = 1-_tableMenu.hidden;
 }
-
+//hahha
 -(void)setBackButton{
     if (!_backBtn) {
         _backBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
