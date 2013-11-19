@@ -9,6 +9,7 @@
 #import "ViewControllerWithNavbar.h"
 #import "TableMenu.h"
 #import "MainTabBar.h"
+#import "AppDelegate.h"
 #define MENU_WIDTH 50
 
 @interface ViewControllerWithNavbar ()<UISearchBarDelegate>
@@ -176,7 +177,10 @@
 - (void) didSelectItem:(int)rowIndex
 {
     self.tableMenu.hidden =YES;
-    [self.tabBarController setSelectedIndex:2];
+    AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+    
+    [appdelegate.tabController setSelectedIndex:2];
+    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
     NSLog(@"%d",rowIndex);
 }
 

@@ -14,8 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    UITabBarController *tabController = (UITabBarController *)self.window.rootViewController;
-    tabController.delegate = self;
+    _tabController = (UITabBarController *)self.window.rootViewController;
+    _tabController.delegate = self;
     return YES;
 }
 							

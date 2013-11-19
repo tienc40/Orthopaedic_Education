@@ -118,10 +118,16 @@
 #pragma button action
 - (void) itemCenterAction
 {
-    //[self setSelectedIndex:2];
     [self hideAllMenu];
-    [self setSelectedViewController:self.viewControllers[2]];
+    AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
     
+    
+    
+    [appdelegate.tabController setSelectedIndex:2];
+    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
+    //[self setSelectedIndex:2];
+//    [self setSelectedViewController:self.viewControllers[2]];
+//    [self.viewControllers[2] popToRootViewControllerAnimated:YES];
 }
 
 - (void) hideAllMenu{
