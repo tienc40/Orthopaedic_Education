@@ -213,7 +213,6 @@
 		B5D82A981836217F00579343 /* Z115WordPressTag.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D82A971836217F00579343 /* Z115WordPressTag.m */; };
 		B5E6167A183A381A008B15E9 /* default.css in Resources */ = {isa = PBXBuildFile; fileRef = B5E61677183A381A008B15E9 /* default.css */; };
 		B5E6167B183A381A008B15E9 /* z115wordpress.js in Sources */ = {isa = PBXBuildFile; fileRef = B5E61678183A381A008B15E9 /* z115wordpress.js */; };
-		B5E6167C183A381A008B15E9 /* libraries.html in Resources */ = {isa = PBXBuildFile; fileRef = B5E61679183A381A008B15E9 /* libraries.html */; };
 		B5EA8D5D183A0B9700866A07 /* UIColor+Z115WordPress.m in Sources */ = {isa = PBXBuildFile; fileRef = B5EA8D5C183A0B9700866A07 /* UIColor+Z115WordPress.m */; };
 /* End PBXBuildFile section */
 
@@ -537,7 +536,6 @@
 		B5D82A971836217F00579343 /* Z115WordPressTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPressTag.m; sourceTree = "<group>"; };
 		B5E61677183A381A008B15E9 /* default.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = default.css; path = Resources/default.css; sourceTree = "<group>"; };
 		B5E61678183A381A008B15E9 /* z115wordpress.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = z115wordpress.js; path = Resources/z115wordpress.js; sourceTree = "<group>"; };
-		B5E61679183A381A008B15E9 /* libraries.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = libraries.html; path = Resources/libraries.html; sourceTree = "<group>"; };
 		B5EA8D5B183A0B9700866A07 /* UIColor+Z115WordPress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Z115WordPress.h"; sourceTree = "<group>"; };
 		B5EA8D5C183A0B9700866A07 /* UIColor+Z115WordPress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Z115WordPress.m"; sourceTree = "<group>"; };
 		F6E6A79363664438BDDC4E9E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -609,7 +607,6 @@
 			children = (
 				B5E61677183A381A008B15E9 /* default.css */,
 				B5E61678183A381A008B15E9 /* z115wordpress.js */,
-				B5E61679183A381A008B15E9 /* libraries.html */,
 				B5E6166F183A37CE008B15E9 /* Images */,
 				4B5F3AD81837FA6E0096A4B3 /* plist */,
 			);
@@ -1348,7 +1345,6 @@
 				B5B402401836850A004757C9 /* Hold_Timer@2x.png in Resources */,
 				B5B402351836850A004757C9 /* 338-enter-fullscreen.png in Resources */,
 				B5B37A0218373D020032688F /* icon-ipad@2x.png in Resources */,
-				B5E6167C183A381A008B15E9 /* libraries.html in Resources */,
 				4BEF5FA01838D26100B90B08 /* shop_s@2x.png in Resources */,
 				4BCD31DA183904B4007343FF /* info.png in Resources */,
 				B5B402231836850A004757C9 /* 40-forward.png in Resources */,

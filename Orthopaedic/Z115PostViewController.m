@@ -454,7 +454,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    
+    NSLog(@"webView Did finish load");	
+    [self.webView.scrollView setShowsHorizontalScrollIndicator:NO];
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
