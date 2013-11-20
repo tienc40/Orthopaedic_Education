@@ -72,6 +72,10 @@
 
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"appear");
+}
 - (void) viewDidAppear:(BOOL)animated
 {
     
@@ -114,7 +118,13 @@
 #pragma mark leftItem
 
 - (void) categoryBtnAction{
-     _tableMenu.hidden = 1-_tableMenu.hidden;
+    
+        [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
+            _tableMenu.hidden = 1-_tableMenu.hidden;
+        } completion:^(BOOL finished) {
+            
+        }];
+    
 }
 //hahha
 -(void)setBackButton{
@@ -181,6 +191,7 @@
     
     [appdelegate.tabController setSelectedIndex:2];
     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
+    
     NSLog(@"%d",rowIndex);
 }
 

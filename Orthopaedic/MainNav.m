@@ -52,7 +52,11 @@
 
     
 }
-
+//
+-(void)viewDidAppear:(BOOL)animated
+{
+    NSLog(@"did appear");
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
