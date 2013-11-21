@@ -53,8 +53,6 @@
     _negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     [_negativeSpacer setWidth:-_paddingWith];
     
-    
-    
     //Search
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width - 2*MENU_WIDTH-_marginSearchbar, 30)];
     _searchBar.delegate = self;
@@ -100,10 +98,7 @@
         
         
         // btn search
-//        if (!_searchBar) {
-            _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
-//        }
-
+        _searchBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
         [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
         [_searchBtn addTarget:self action:@selector(searchBtnAction) forControlEvents:UIControlEventTouchUpInside];
         
@@ -133,7 +128,8 @@
     }
 //    [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:_backBtn];
-    [_backBtn setTitle:@"Back" forState:UIControlStateNormal];
+//    [_backBtn setTitle:@"Back" forState:UIControlStateNormal];
+    [_backBtn setImage:[UIImage imageNamed:@"backbtn.png"] forState:UIControlStateNormal];
     [_backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,backItem, nil];
 }
@@ -146,21 +142,20 @@
 #pragma mark right item
 
 - (void) searchBtnAction{
-    [UIView animateWithDuration:0.4 animations:^{
-        UIButton *closeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        closeBtn.frame = CGRectMake(0, 0, MENU_WIDTH, 40);
-        [closeBtn addTarget:self action:@selector(closeSearch) forControlEvents:UIControlEventTouchUpInside];
-        [closeBtn setTitle:@"close" forState:UIControlStateNormal];
-        
-        UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc]initWithCustomView:closeBtn];
-        
-        UIBarButtonItem *sb = [[UIBarButtonItem alloc] initWithCustomView:_searchBar];
-        
-        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,closeBarBtn,sb, nil];
-        self.navigationItem.title = @"";
-        
-        [_searchBar becomeFirstResponder];
-    }];
+//    [UIView animateWithDuration:0.4 animations:^{
+    UIButton *closebtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
+    [closebtn setImage:[UIImage imageNamed:@"closebtn.png"] forState:UIControlStateNormal];
+    [closebtn addTarget:self action:@selector(closeSearch) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *closeBarBtn = [[UIBarButtonItem alloc]initWithCustomView:closebtn];
+    
+    UIBarButtonItem *sb = [[UIBarButtonItem alloc] initWithCustomView:_searchBar];
+    
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,closeBarBtn,sb, nil];
+    self.navigationItem.title = @"";
+    
+    [_searchBar becomeFirstResponder];
+    //    }];
 }
 
 - (void) closeSearch
@@ -187,7 +182,7 @@
 - (void) didSelectItem:(int)rowIndex
 {
     self.tableMenu.hidden =YES;
-    AppDelegate *appdelegate = [[UIApplication sharedApplication] delegate];
+    AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
     [appdelegate.tabController setSelectedIndex:2];
     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
