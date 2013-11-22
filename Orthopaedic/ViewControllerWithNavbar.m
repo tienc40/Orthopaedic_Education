@@ -121,12 +121,14 @@
     if (!_backBtn) {
         _backBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
     }
-//    [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
+    //    [_searchBtn setImage:[UIImage imageNamed:@"searchbtn.png"] forState:UIControlStateNormal];
+
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]initWithCustomView:_backBtn];
     [_backBtn setTitle:@"Back" forState:UIControlStateNormal];
     [_backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:_negativeSpacer,backItem, nil];
 }
+
 - (void)back
 {
     [self.navigationController popViewControllerAnimated:YES];

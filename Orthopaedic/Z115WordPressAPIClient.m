@@ -9,6 +9,7 @@
 #import "Z115WordPressAPIClient.h"
 #import "AFJSONRequestOperation.h"
 #import "Z115WordPressPost.h"
+#import "Z115WordPressCategory.h"
 
 static NSString * const z115WordpressURLString =  @"http://www.mobileappscentre.co.uk/healthapp/";
 
