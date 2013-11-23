@@ -182,7 +182,7 @@
 
 #pragma mark -
 #pragma mark MenuDelegate Methods
-- (void) didSelectItem:(NSNumber *)rowIndex
+- (void) didSelectItem:(NSNumber *)rowIndex withName:(NSString *)rowName
 {
     self.tableMenu.hidden = YES;
     AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];

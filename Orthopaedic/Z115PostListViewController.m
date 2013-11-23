@@ -300,10 +300,10 @@
 
 #pragma mark -
 #pragma mark MenuDelegate Methods
-- (void) didSelectItem:(NSNumber *)rowIndex
+- (void) didSelectItem:(NSNumber *)rowIndex withName:(NSString *)rowName
 {
-    [super didSelectItem:rowIndex];
-    NSLog(@"%@",rowIndex);
+    [super didSelectItem:rowIndex withName:rowName];
+    self.navigationItem.title = rowName;
     [self.dataSource fetchCategory:rowIndex];
     [self loadPosts:NO];
 }
