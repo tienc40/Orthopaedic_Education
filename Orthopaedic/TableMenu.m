@@ -105,10 +105,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)newIndexPath{
-    
     Z115CategoryTableViewCell *cell = (Z115CategoryTableViewCell *)[tableView cellForRowAtIndexPath:newIndexPath];
-    [_menuDelegate didSelectItem:cell.category.z115WordPressCategoryId];
-    [tableView deselectRowAtIndexPath:newIndexPath animated:YES];
+    [self.menuDelegate didSelectItem:cell.category.z115WordPressCategoryId];
+    //[tableView deselectRowAtIndexPath:newIndexPath animated:YES];
 }
 
 @end

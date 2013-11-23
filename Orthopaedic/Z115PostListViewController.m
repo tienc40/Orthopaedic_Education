@@ -25,10 +25,6 @@
 #import "Z115WordPressTag.h"
 
 @interface Z115PostListViewController ()
-
-@property (strong, nonatomic) NSNumber *authorId;
-@property (strong, nonatomic) NSNumber *categoryId;
-@property (strong, nonatomic) NSNumber *tagId;
 @property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
 @property (nonatomic, strong) UIView *loadingView;
 
@@ -301,6 +297,19 @@
     [self.pullToRefreshView startLoading];
     [self loadPosts:NO];
 }
+
+#pragma mark -
+#pragma mark MenuDelegate Methods
+- (void) didSelectItem:(NSNumber *)rowIndex
+{
+    [super didSelectItem:rowIndex];
+    /* AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [appdelegate.tabController setSelectedIndex:2];
+    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES]; */
+    
+    NSLog(@"%@",rowIndex);
+}
+
 
 
 @end
