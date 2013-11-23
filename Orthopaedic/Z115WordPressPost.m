@@ -166,8 +166,7 @@ static SORelativeDateTransformer *sRelativetDateFormatter = nil;
     } else if ([key isEqualToString:@"previous_title"]) {
         [self setValue:value forKey:@"previousTitle"];
     } else {
-        NSLog(@"undefined key: %@", key);
-        
+        //NSLog(@"undefined key: %@", key);
         //[super setValue:value forUndefinedKey:key];
     }
     

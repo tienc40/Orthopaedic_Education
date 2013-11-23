@@ -9,6 +9,7 @@
 #import "AFHTTPClient.h"
 
 @class Z115WordPressPost;
+@class Z115WordPressCategory;
 
 @interface Z115WordPressAPIClient : AFHTTPClient
 
@@ -18,6 +19,9 @@
            withFailure:(void (^)(NSError *error))failure;
 - (void)loadFromPostUrl:(NSURL *)postUrl
             withSuccess:(void (^)(Z115WordPressPost* post))success
+            withFailure:(void (^)(NSError *error))failure;
+- (void)loadFromCategoryUrl:(NSURL *)categoryUrl
+            withSuccess:(void (^)(Z115WordPressCategory* category))success
             withFailure:(void (^)(NSError *error))failure;
 
 @end

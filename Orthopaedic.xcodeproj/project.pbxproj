@@ -52,6 +52,7 @@
 		B53200A0183765DB007E7C57 /* UIView+Z115WordPress.m in Sources */ = {isa = PBXBuildFile; fileRef = B532009F183765DB007E7C57 /* UIView+Z115WordPress.m */; };
 		B53200A41837671F007E7C57 /* Z115WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B53200A21837671F007E7C57 /* Z115WebViewController.m */; };
 		B53200A51837671F007E7C57 /* Z115WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B53200A31837671F007E7C57 /* Z115WebViewController.xib */; };
+		B5443CCE183FDD330005EDE8 /* Z115CategoryListDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B5443CCD183FDD330005EDE8 /* Z115CategoryListDataSource.m */; };
 		B554B2961839162500F0D0AD /* NIActions.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B24D1839162500F0D0AD /* NIActions.m */; };
 		B554B2971839162500F0D0AD /* NIButtonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B24F1839162500F0D0AD /* NIButtonUtilities.m */; };
 		B554B2981839162500F0D0AD /* NICommonMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2511839162500F0D0AD /* NICommonMetrics.m */; };
@@ -84,6 +85,7 @@
 		B554B2B51839197400F0D0AD /* NetworkPhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */; };
 		B554B2BC18391BB200F0D0AD /* Z115WordPress.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2BB18391BB200F0D0AD /* Z115WordPress.m */; };
 		B58D677E183636C500E77BDD /* Z115WordPressAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B58D677D183636C500E77BDD /* Z115WordPressAPIClient.m */; };
+		B59456E51840C3F100B36D7C /* Z115CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B59456E41840C3F100B36D7C /* Z115CategoryTableViewCell.m */; };
 		B5AC7BAD1839D60100DF420A /* Z115ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AC7BAC1839D60100DF420A /* Z115ViewController.m */; };
 		B5B379FD18373D020032688F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B379F418373D020032688F /* Default-568h@2x.png */; };
 		B5B379FE18373D020032688F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B5B379F518373D020032688F /* Default.png */; };
@@ -284,6 +286,8 @@
 		B53200A11837671F007E7C57 /* Z115WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115WebViewController.h; sourceTree = "<group>"; };
 		B53200A21837671F007E7C57 /* Z115WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WebViewController.m; sourceTree = "<group>"; };
 		B53200A31837671F007E7C57 /* Z115WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Z115WebViewController.xib; sourceTree = "<group>"; };
+		B5443CCC183FDD330005EDE8 /* Z115CategoryListDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115CategoryListDataSource.h; sourceTree = "<group>"; };
+		B5443CCD183FDD330005EDE8 /* Z115CategoryListDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115CategoryListDataSource.m; sourceTree = "<group>"; };
 		B554B24B1839162500F0D0AD /* NIActions+Subclassing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NIActions+Subclassing.h"; sourceTree = "<group>"; };
 		B554B24C1839162500F0D0AD /* NIActions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIActions.h; sourceTree = "<group>"; };
 		B554B24D1839162500F0D0AD /* NIActions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIActions.m; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 		B554B2C018392D8C00F0D0AD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		B58D677C183636C500E77BDD /* Z115WordPressAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115WordPressAPIClient.h; sourceTree = "<group>"; };
 		B58D677D183636C500E77BDD /* Z115WordPressAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPressAPIClient.m; sourceTree = "<group>"; };
+		B59456E31840C3F100B36D7C /* Z115CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115CategoryTableViewCell.h; sourceTree = "<group>"; };
+		B59456E41840C3F100B36D7C /* Z115CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115CategoryTableViewCell.m; sourceTree = "<group>"; };
 		B5AC7BAB1839D60100DF420A /* Z115ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115ViewController.h; sourceTree = "<group>"; };
 		B5AC7BAC1839D60100DF420A /* Z115ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115ViewController.m; sourceTree = "<group>"; };
 		B5B379F418373D020032688F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -826,6 +832,8 @@
 				B5B401DF18368016004757C9 /* Z115DataSource.m */,
 				B5B401E11836805C004757C9 /* Z115PostListDataSource.h */,
 				B5B401E21836805C004757C9 /* Z115PostListDataSource.m */,
+				B5443CCC183FDD330005EDE8 /* Z115CategoryListDataSource.h */,
+				B5443CCD183FDD330005EDE8 /* Z115CategoryListDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -839,6 +847,8 @@
 				B5B4025418368BF7004757C9 /* Z115PostTableViewCell.m */,
 				B5C0231B18372FA9006FEBFF /* Z115PullToRefreshContentView.h */,
 				B5C0231C18372FA9006FEBFF /* Z115PullToRefreshContentView.m */,
+				B59456E31840C3F100B36D7C /* Z115CategoryTableViewCell.h */,
+				B59456E41840C3F100B36D7C /* Z115CategoryTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -1476,6 +1486,7 @@
 				B5D82A6018360D2C00579343 /* ViewController.m in Sources */,
 				B5B401421836668B004757C9 /* GTMNSString+HTML.m in Sources */,
 				B5B401BB18366E69004757C9 /* AFURLConnectionOperation.m in Sources */,
+				B59456E51840C3F100B36D7C /* Z115CategoryTableViewCell.m in Sources */,
 				B554B2AC1839162500F0D0AD /* NSString+NimbusCore.m in Sources */,
 				B58D677E183636C500E77BDD /* Z115WordPressAPIClient.m in Sources */,
 				B5B401B518366E69004757C9 /* AFHTTPClient.m in Sources */,
@@ -1528,6 +1539,7 @@
 				B554B2A41839162500F0D0AD /* NINonRetainingCollections.m in Sources */,
 				B5B40038183665A6004757C9 /* SSPullToRefreshView.m in Sources */,
 				B5B401B918366E69004757C9 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				B5443CCE183FDD330005EDE8 /* Z115CategoryListDataSource.m in Sources */,
 				B5D82A8F183612A900579343 /* Z115WordPressPostAttachmentImages.m in Sources */,
 				B5C0231D18372FA9006FEBFF /* Z115PullToRefreshContentView.m in Sources */,
 				B5B401B718366E69004757C9 /* AFImageRequestOperation.m in Sources */,

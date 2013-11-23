@@ -101,7 +101,7 @@
 - (void)viewPost
 {
     [self.parentViewController viewPost:self];
-    NSLog(@"View POst");
+    NSLog(@"View Post");
 }
 
 

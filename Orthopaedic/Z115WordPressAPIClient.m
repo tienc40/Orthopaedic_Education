@@ -94,4 +94,30 @@ static NSString * const z115WordpressURLString =  @"http://www.mobileappscentre.
 }
 
 
+- (void)loadFromCategoryUrl:(NSURL *)categoryUrl
+            withSuccess:(void (^)(Z115WordPressCategory* category))success
+            withFailure:(void (^)(NSError *error))failure
+{
+    NSLog(@"[categoryUrl path]: %@", [categoryUrl path]);
+    [self getPath:[categoryUrl path]
+       parameters:@{@"json" : @"1"}
+          success:^(AFHTTPRequestOperation *operation, id JSON) {
+              NSLog(@"Json: %@", JSON);
+              
+              Z115WordPressCategory *category = [Z115WordPressCategory instanceFromDictionary:JSON[@"category"]];
+              if (success)
+              {
+                  success(category);
+              }
+              
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              if (failure)
+              {
+                  failure(error);
+              }
+          }];
+    
+}
+
+
 @end

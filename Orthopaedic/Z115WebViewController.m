@@ -32,7 +32,7 @@
 
 - (id)initWithWebURL:(NSURLRequest *)request
 {
-    self = [self initWithNibName:@"KMWebViewController" bundle:nil];
+    self = [self initWithNibName:@"Z115WebViewController" bundle:nil];
     if (self) {
         // Custom initialization
         self.request = request;

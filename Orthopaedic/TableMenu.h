@@ -9,16 +9,22 @@
 #import <UIKit/UIKit.h>
 
 @protocol TableMenuDelegate;
+@class Z115CategoryListDataSource;
 
-@interface TableMenu : UIView <UITableViewDelegate,UITableViewDataSource>
+@interface TableMenu : UIView <UITableViewDelegate>
 @property (strong) UITableView *categoryMenu;
 @property (assign,nonatomic) id<TableMenuDelegate> menuDelegate;
+@property (nonatomic, strong) Z115CategoryListDataSource *dataSource;
+@property (nonatomic, strong) UIView *loadingView;
+
+- (void)endRefresh;
+- (void)loadCategories;
+- (void)finishedLoad;
 
 @end
 
-
 @protocol TableMenuDelegate
 @required
-- (void) didSelectItem:(int) rowIndex;
+- (void) didSelectItem:(NSNumber *) rowIndex;
 
 @end

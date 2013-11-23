@@ -21,5 +21,4 @@
 
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;
 
-
 @end

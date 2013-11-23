@@ -175,7 +175,7 @@
         <!--View Controller - Orthopaedic Education-->
         <scene sceneID="rfW-H3-cnZ">
             <objects>
-                <viewController id="q27-6d-MXw" customClass="Z115ViewController" sceneMemberID="viewController">
+                <viewController id="q27-6d-MXw" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jcI-38-H0e"/>
                         <viewControllerLayoutGuide type="bottom" id="Zel-yl-QbP"/>

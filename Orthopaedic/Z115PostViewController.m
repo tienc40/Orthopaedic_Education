@@ -347,18 +347,17 @@
     self.loadPreviousView.hidden = ![self canLoadPrevious];
     self.loadNextView.hidden = ![self canLoadNext];
     
-    
-    //[[[GAI sharedInstance] defaultTracker] sendView:[NSString stringWithFormat:@"Post %@ %@", self.post.titlePlain, self.post.kMWordPressPostId]];
+
 }
 
 #pragma mark - UIWebViewDelegate
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    if ([[[request URL] scheme] isEqualToString:@"kmwordpress"])
+    if ([[[request URL] scheme] isEqualToString:@"z115wordpress"])
     {
-        UIViewController *vc;
+        /* UIViewController *vc;
         
-        if ([[[request URL] host] isEqualToString:@"author"])
+         if ([[[request URL] host] isEqualToString:@"author"])
         {
             vc = [[Z115PostListViewController alloc] initWithAuthorId:[[request URL] port]];
         }
@@ -378,7 +377,7 @@
         if (vc)
         {
             [self.navigationController pushViewController:vc animated:YES];
-        }
+        } */
         
         return NO;
     }

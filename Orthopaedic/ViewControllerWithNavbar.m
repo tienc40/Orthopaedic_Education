@@ -181,15 +181,14 @@
 }
 #pragma mark menu delegate
 
-- (void) didSelectItem:(int)rowIndex
+- (void) didSelectItem:(NSNumber *)rowIndex
 {
     self.tableMenu.hidden =YES;
     AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    
     [appdelegate.tabController setSelectedIndex:2];
     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
     
-    NSLog(@"%d",rowIndex);
+    NSLog(@"%@",rowIndex);
 }
 
 @end

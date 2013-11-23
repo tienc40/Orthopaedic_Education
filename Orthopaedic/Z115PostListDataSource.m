@@ -64,7 +64,7 @@
 
 - (void)loadMore:(BOOL)more withSuccess:(void (^)(void))success withFailure:(void (^)(NSError *error))failure
 {
-    [self cancel];
+    //[self cancel];
     
     self.loading = YES;
     
@@ -74,6 +74,7 @@
     
     NSMutableDictionary *fetchParams  = self.params.mutableCopy;
     fetchParams[@"page"] = [NSString stringWithFormat:@"%d", self.page];
+    
     
     __block Z115PostListDataSource *blockSelf = self;
     
