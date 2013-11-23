@@ -10,6 +10,8 @@
 #import "TableMenu.h"
 #import "MainTabBar.h"
 #import "AppDelegate.h"
+#import "Z115PostListViewController.h"
+
 #define MENU_WIDTH 50
 
 @interface ViewControllerWithNavbar ()<UISearchBarDelegate>
@@ -178,24 +180,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+#pragma mark -
 #pragma mark searchbar delegate
-
-
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self resetBarItem];
 }
-#pragma mark menu delegate
 
-- (void) didSelectItem:(NSNumber *)rowIndex
+#pragma mark -
+#pragma mark MenuDelegate Methods
+- (void) didSelectItem:(NSNumber *)rowIndex withName:(NSString *)rowName
 {
-    self.tableMenu.hidden =YES;
+    self.tableMenu.hidden = YES;
     AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appdelegate.tabController setSelectedIndex:2];
-    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
-    
-    NSLog(@"%@",rowIndex);
+     [appdelegate.tabController setSelectedIndex:2];
+     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
 }
+
 
 @end

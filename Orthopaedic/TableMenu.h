@@ -25,6 +25,5 @@
 
 @protocol TableMenuDelegate
 @required
-- (void) didSelectItem:(NSNumber *) rowIndex;
-
+- (void) didSelectItem:(NSNumber *) rowIndex withName:(NSString *)rowName;
 @end
