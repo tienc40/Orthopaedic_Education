@@ -53,6 +53,8 @@
     }
     
     self.navigationController.navigationBar.alpha = 1;
+    self.navigationController.navigationBar.translucent = NO;
+    
     
     _negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     [_negativeSpacer setWidth:-_paddingWith];
