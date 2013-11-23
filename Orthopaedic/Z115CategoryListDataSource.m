@@ -117,20 +117,24 @@
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.items count];
+    return [self.items count] + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-        Z115WordPressCategory *category = [self.items objectAtIndex:indexPath.row];
-    
-        Z115CategoryTableViewCell *cell = [[Z115CategoryTableViewCell alloc] init];
+    Z115CategoryTableViewCell *cell = [[Z115CategoryTableViewCell alloc] init];
+    if(indexPath.row == 0) {
+        cell.textLabel.text = @"Latest Posts";
+        cell.imageView.image = [UIImage imageNamed:@"row2.png"];
+    } else {
+        Z115WordPressCategory *category = [self.items objectAtIndex:(indexPath.row - 1)];
         cell.textLabel.text = category.title;
         cell.imageView.image = [UIImage imageNamed:@"row1.png"];
         cell.category = category;
+    }
     
-        return cell;
+    return cell;
 }
 
 

@@ -121,14 +121,9 @@
     [self hideAllMenu];
     AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
-    
     [appdelegate.tabController setSelectedIndex:2];
     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
-    NSLog(@"number vc %d",[appdelegate.tabController.viewControllers count]);
-    
-    //[self setSelectedIndex:2];
-//    [self setSelectedViewController:self.viewControllers[2]];
-//    [self.viewControllers[2] popToRootViewControllerAnimated:YES];
+    //NSLog(@"number vc %d",[appdelegate.tabController.viewControllers count]);
 }
 
 
