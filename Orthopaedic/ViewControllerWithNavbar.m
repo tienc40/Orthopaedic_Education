@@ -46,11 +46,13 @@
     {
         self.edgesForExtendedLayout = UIRectEdgeNone;
         _paddingWith = 16;
-        _marginSearchbar = 10;
+        _marginSearchbar = 16;
     }else{
         _paddingWith = 5;
-        _marginSearchbar = 30;
+        _marginSearchbar = 21;
     }
+    
+    self.navigationController.navigationBar.alpha = 1;
     
     _negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     [_negativeSpacer setWidth:-_paddingWith];
@@ -61,7 +63,12 @@
     _searchBar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [_searchBar setBackgroundImage:[UIImage imageNamed:@"mainnavbg.png"]];
     
-    _tableMenu = [[TableMenu alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    
+    CGRect navframe = [[self.navigationController navigationBar] frame];
+    CGRect tabframe = self.tabBarController.tabBar.frame;
+    
+    NSLog(@"%f",navframe.size.height);
+    _tableMenu = [[TableMenu alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-navframe.size.height-tabframe.size.height)];
     _tableMenu.hidden = YES;
     [self.view bringSubviewToFront:_tableMenu];
     [self.view addSubview:_tableMenu];
