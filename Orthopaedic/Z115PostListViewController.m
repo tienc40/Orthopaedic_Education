@@ -303,11 +303,9 @@
 - (void) didSelectItem:(NSNumber *)rowIndex
 {
     [super didSelectItem:rowIndex];
-    /* AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [appdelegate.tabController setSelectedIndex:2];
-    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES]; */
-    
     NSLog(@"%@",rowIndex);
+    [self.dataSource fetchCategory:rowIndex];
+    [self loadPosts:NO];
 }
 
 

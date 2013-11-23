@@ -184,8 +184,10 @@
 #pragma mark MenuDelegate Methods
 - (void) didSelectItem:(NSNumber *)rowIndex
 {
-    // Nothing here
     self.tableMenu.hidden = YES;
+    AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+     [appdelegate.tabController setSelectedIndex:2];
+     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
 }
 
 
