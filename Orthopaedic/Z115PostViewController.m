@@ -132,6 +132,7 @@
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.delegate = self;
+    [self.webView.scrollView setShowsHorizontalScrollIndicator:NO];
     
     for (UIView *view in [self.webView.scrollView subviews])
     {
@@ -460,7 +461,6 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"webView Did finish load");	
-    [self.webView.scrollView setShowsHorizontalScrollIndicator:NO];
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -546,7 +546,12 @@
     [self.delegate didSearchPosts:searchBar.text];
 
 }
-    
 
+// disable horizontal scollbar
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.contentOffset.x > 0)
+        scrollView.contentOffset = CGPointMake(0, scrollView.contentOffset.y);
+}
 
 @end
