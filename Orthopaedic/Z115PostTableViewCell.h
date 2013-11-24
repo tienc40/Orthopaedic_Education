@@ -19,3 +19,4 @@
 - (void)showPost:(Z115WordPressPost *)post;
 
 @end
+

@@ -274,6 +274,7 @@
     }
     
     Z115PostViewController *postViewController = [[Z115PostViewController alloc] initWithDataSource:self.dataSource withStartIndex:indexPath.row];
+    postViewController.delegate = self;
     [self.navigationController pushViewController:postViewController animated:YES];
 
 
@@ -290,6 +291,20 @@
     }
 }
 
+- (void)searchByText:(NSString *)text
+{
+    self.navigationItem.title = [NSString stringWithFormat:@"Search: %@",text];
+    [super resetBarItem];
+    [self.dataSource searchPosts:text];
+    [self loadPosts:NO];
+}
+
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self searchByText:searchBar.text];
+}
+
 
 #pragma mark -
 #pragma mark MSPullToRefreshDelegate Methods
@@ -298,14 +313,6 @@
     [self.pullToRefreshView startLoading];
     [self loadPosts:NO];
 }
-
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
-    [super resetBarItem];
-    [self.dataSource searchPosts:searchBar.text];
-    [self loadPosts:NO];
-}
-
 
 #pragma mark -
 #pragma mark MenuDelegate Methods
@@ -321,6 +328,12 @@
     [self loadPosts:NO];
 }
 
+#pragma mark -
+#pragma mark PostListDelegate Methods
+- (void) didSearchPosts:(NSString *) text
+{
+    [self searchByText:text];
+}
 
 
 @end

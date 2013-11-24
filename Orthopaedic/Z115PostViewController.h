@@ -11,7 +11,14 @@
 @class Z115WordPressPost;
 @class Z115PostListDataSource;
 
+@protocol PostListDelegate
+@required
+- (void) didSearchPosts:(NSString *) text;
+@end
+
 @interface Z115PostViewController : Z115ViewController <UIWebViewDelegate, UIScrollViewDelegate, UIGestureRecognizerDelegate>
+
+@property (assign,nonatomic) id<PostListDelegate> delegate;
 
 @property (nonatomic, strong) Z115PostListDataSource* dataSource;
 @property (nonatomic, strong) Z115WordPressPost *post;

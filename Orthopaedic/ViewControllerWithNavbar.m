@@ -184,7 +184,6 @@
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self resetBarItem];
-    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 #pragma mark -

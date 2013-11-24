@@ -21,6 +21,8 @@
 #import "Z115WordPressCategory.h"
 #import "Z115WordPressTag.h"
 
+#import "AppDelegate.h"
+
 @interface Z115PostViewController ()
 
 @property (nonatomic, strong) NSString *postId;
@@ -537,6 +539,14 @@
     
     [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"changeFontSize('%f')", self.fontSize]];
 }
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [self.delegate didSearchPosts:searchBar.text];
+
+}
+    
 
 
 @end

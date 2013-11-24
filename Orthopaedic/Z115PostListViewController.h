@@ -8,11 +8,12 @@
 
 #import "Z115ViewController.h"
 #import "SSPullToRefresh.h"
+#import "Z115PostViewController.h"
 
 @class Z115PostListDataSource;
 @class Z115PostTableViewCell;
 
-@interface Z115PostListViewController : Z115ViewController <UITableViewDelegate, SSPullToRefreshViewDelegate>
+@interface Z115PostListViewController : Z115ViewController <UITableViewDelegate, SSPullToRefreshViewDelegate,PostListDelegate>
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) Z115PostListDataSource *dataSource;
@@ -30,3 +31,4 @@
 - (void)viewPost:(Z115PostTableViewCell *)cell;
 
 @end
+
