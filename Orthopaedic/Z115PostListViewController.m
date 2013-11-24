@@ -290,6 +290,7 @@
     }
 }
 
+
 #pragma mark -
 #pragma mark MSPullToRefreshDelegate Methods
 
@@ -297,6 +298,14 @@
     [self.pullToRefreshView startLoading];
     [self loadPosts:NO];
 }
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [super resetBarItem];
+    [self.dataSource searchPosts:searchBar.text];
+    [self loadPosts:NO];
+}
+
 
 #pragma mark -
 #pragma mark MenuDelegate Methods

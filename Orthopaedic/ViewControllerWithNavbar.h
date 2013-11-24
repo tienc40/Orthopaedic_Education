@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) TableMenu* tableMenu;
 
--(void)setBackButton;
+- (void)resetBarItem;
+- (void)setBackButton;
 - (void)back;
 @end

@@ -199,7 +199,6 @@
     if (self.post)
     {
         [self loadPost];
-        NSLog(@"Load Post");
     }
     else if (self.postUrl)
     {
@@ -232,6 +231,8 @@
     [self.webView addGestureRecognizer:pinch];
     
     [self attachBackSwipe:self.webView];
+    
+    self.title = self.post.title;
     
 }
 
