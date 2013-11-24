@@ -93,10 +93,7 @@
 
 - (void) resetBarItem
 {
-    [UIView animateWithDuration:0.4 animations:^{
-        // title menu
-        self.navigationItem.title = @"Latest Posts";
-        
+    [UIView animateWithDuration:0.4 animations:^{  
         // category menu
         if (!self.categoryBtn) {
             self.categoryBtn = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
