@@ -304,7 +304,11 @@
 {
     [super didSelectItem:rowIndex withName:rowName];
     self.navigationItem.title = rowName;
-    [self.dataSource fetchCategory:rowIndex];
+    if(rowIndex == 0) {
+        [self.dataSource fetchRecentPosts];
+    } else {
+        [self.dataSource fetchCategory:rowIndex];
+    }
     [self loadPosts:NO];
 }
 

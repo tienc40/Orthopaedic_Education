@@ -125,8 +125,14 @@
     
     Z115CategoryTableViewCell *cell = [[Z115CategoryTableViewCell alloc] init];
     if(indexPath.row == 0) {
-        cell.textLabel.text = @"Latest Posts";
+        Z115WordPressCategory *category = [Z115WordPressCategory new];
+        category.z115WordPressCategoryId = 0;
+        category.title = @"Latest Posts";
+
+        cell.textLabel.text = category.title;
         cell.imageView.image = [UIImage imageNamed:@"row2.png"];
+        cell.category = category;
+        
     } else {
         Z115WordPressCategory *category = [self.items objectAtIndex:(indexPath.row - 1)];
         cell.textLabel.text = category.title;

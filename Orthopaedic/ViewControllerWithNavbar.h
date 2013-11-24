@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "TableMenu.h"
 @interface ViewControllerWithNavbar : UIViewController <UINavigationControllerDelegate,TableMenuDelegate>
-@property (strong) TableMenu* tableMenu;
+
+@property (strong, nonatomic) TableMenu* tableMenu;
+
 -(void)setBackButton;
 - (void)back;
 @end
