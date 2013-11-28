@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOm-eu-08S">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOm-eu-08S">
                     <rect key="frame" x="9" y="17" width="301" height="410"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -23,7 +23,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                     </userDefinedRuntimeAttributes>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-tb-Ubz">
+                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Twr-tb-Ubz">
                     <rect key="frame" x="20" y="373" width="273" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" image="submitbtn.png">
@@ -33,7 +33,7 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                     </userDefinedRuntimeAttributes>
                 </button>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-wn-caD">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghx-wn-caD">
                     <rect key="frame" x="20" y="83" width="49" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -45,7 +45,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRe-h6-k3Z">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRe-h6-k3Z">
                     <rect key="frame" x="23" y="162" width="42" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -57,21 +57,24 @@
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIm-db-2UG">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iIm-db-2UG">
                     <rect key="frame" x="20" y="118" width="276" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqr-Hp-MuA">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wqr-Hp-MuA">
                     <rect key="frame" x="23" y="256" width="273" height="103"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="103" id="pPw-gR-PO5"/>
+                    </constraints>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For more infomation or to apply to become a publisher  please fill in the detail below:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-bq-zJE">
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="For more infomation or to apply to become a publisher  please fill in the detail below:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="5YO-bq-zJE">
                     <rect key="frame" x="24" y="12" width="273" height="68"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
@@ -81,7 +84,23 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="QLW-9Z-e55" firstAttribute="top" secondItem="FWb-hR-MVF" secondAttribute="bottom" constant="14" id="riH-Ch-RN3"/>
+                <constraint firstItem="QLW-9Z-e55" firstAttribute="top" secondItem="FWb-hR-MVF" secondAttribute="bottom" constant="8" symbolic="YES" id="5Lq-uW-AHo"/>
+                <constraint firstItem="wqr-Hp-MuA" firstAttribute="top" secondItem="QLW-9Z-e55" secondAttribute="bottom" constant="8" symbolic="YES" id="7cI-15-yZI"/>
+                <constraint firstItem="wqr-Hp-MuA" firstAttribute="top" secondItem="QLW-9Z-e55" secondAttribute="bottom" constant="8" symbolic="YES" id="8xs-Qe-ahO"/>
+                <constraint firstItem="WRe-h6-k3Z" firstAttribute="top" secondItem="iIm-db-2UG" secondAttribute="bottom" constant="8" symbolic="YES" id="Azq-Cm-Q8h"/>
+                <constraint firstItem="ghx-wn-caD" firstAttribute="top" secondItem="5YO-bq-zJE" secondAttribute="bottom" constant="8" symbolic="YES" id="Boc-xc-RWk"/>
+                <constraint firstItem="FWb-hR-MVF" firstAttribute="top" secondItem="WRe-h6-k3Z" secondAttribute="bottom" constant="8" symbolic="YES" id="Ec2-YF-WJW"/>
+                <constraint firstAttribute="bottom" secondItem="FOm-eu-08S" secondAttribute="bottom" constant="20" symbolic="YES" id="J7Y-DO-VIG"/>
+                <constraint firstItem="FWb-hR-MVF" firstAttribute="top" secondItem="WRe-h6-k3Z" secondAttribute="bottom" constant="8" symbolic="YES" id="JHr-xd-wwX"/>
+                <constraint firstItem="Twr-tb-Ubz" firstAttribute="top" secondItem="wqr-Hp-MuA" secondAttribute="bottom" constant="8" symbolic="YES" id="Nmx-xu-cyA"/>
+                <constraint firstAttribute="bottom" secondItem="Twr-tb-Ubz" secondAttribute="bottom" constant="20" symbolic="YES" id="PbN-xU-YTL"/>
+                <constraint firstItem="5YO-bq-zJE" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="Qc4-oZ-va8"/>
+                <constraint firstItem="iIm-db-2UG" firstAttribute="top" secondItem="ghx-wn-caD" secondAttribute="bottom" constant="8" symbolic="YES" id="Vcw-xY-piD"/>
+                <constraint firstItem="FOm-eu-08S" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" symbolic="YES" id="fFN-WS-ufN"/>
+                <constraint firstItem="QLW-9Z-e55" firstAttribute="top" secondItem="FWb-hR-MVF" secondAttribute="bottom" constant="8" symbolic="YES" id="lFQ-EF-h6b"/>
+                <constraint firstItem="ghx-wn-caD" firstAttribute="top" secondItem="5YO-bq-zJE" secondAttribute="bottom" constant="8" symbolic="YES" id="rRw-aK-k4b"/>
+                <constraint firstItem="WRe-h6-k3Z" firstAttribute="top" secondItem="iIm-db-2UG" secondAttribute="bottom" constant="8" symbolic="YES" id="s6Z-wK-RlB"/>
+                <constraint firstItem="iIm-db-2UG" firstAttribute="top" secondItem="ghx-wn-caD" secondAttribute="bottom" constant="8" symbolic="YES" id="yNx-e5-VhZ"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
