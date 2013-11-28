@@ -79,7 +79,12 @@
     self.tableMenu.menuDelegate = self;
     [self resetBarItem];
     self.navigationController.delegate = self;
-
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainbg.png"]];
+    [backgroundImage setFrame:self.view.frame];
+    [self.view addSubview:backgroundImage];
+    [self.view sendSubviewToBack:backgroundImage];
+    [self.view setBackgroundColor:[UIColor clearColor]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
