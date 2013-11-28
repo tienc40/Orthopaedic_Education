@@ -8,6 +8,6 @@
 
 #import "Z115ViewController.h"
 
-@interface Z115ContactViewController : Z115ViewController
+@interface Z115ContactViewController : Z115ViewController <UITextViewDelegate,UITextFieldDelegate>
 
 @end
