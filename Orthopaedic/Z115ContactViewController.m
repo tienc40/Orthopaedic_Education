@@ -35,6 +35,20 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    UIButton* settingBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
+    [settingBtn setImage:[UIImage imageNamed:@"settingnav.png"] forState:UIControlStateNormal];
+    [settingBtn addTarget:self action:@selector(settingAction) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    UIBarButtonItem *settingItem = [[UIBarButtonItem alloc] initWithCustomView:settingBtn];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,settingItem, nil];
+
+
+}
+
+- (void) settingAction
+{
+    NSLog(@"setting action");
 }
 
 - (void)didReceiveMemoryWarning
