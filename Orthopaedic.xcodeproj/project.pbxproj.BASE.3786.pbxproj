@@ -25,10 +25,6 @@
 		4B5F3ADA1837FA810096A4B3 /* menu.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B5F3AD91837FA810096A4B3 /* menu.plist */; };
 		4B839A3618478DBE00007B48 /* mainbg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A3418478DBE00007B48 /* mainbg@2x.png */; };
 		4B839A3718478DBE00007B48 /* mainbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A3518478DBE00007B48 /* mainbg.png */; };
-		4B839A40184796F800007B48 /* Z115ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B839A3E184796F800007B48 /* Z115ContactViewController.m */; };
-		4B839A41184796F800007B48 /* Z115ContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A3F184796F800007B48 /* Z115ContactViewController.xib */; };
-		4B839A4418479EDB00007B48 /* submitbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A4218479EDB00007B48 /* submitbtn.png */; };
-		4B839A4518479EDB00007B48 /* submitbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A4318479EDB00007B48 /* submitbtn@2x.png */; };
 		4BCD31D8183904B4007343FF /* iconTab2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCD31CC183904B4007343FF /* iconTab2.png */; };
 		4BCD31D9183904B4007343FF /* info_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCD31CD183904B4007343FF /* info_s.png */; };
 		4BCD31DA183904B4007343FF /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCD31CE183904B4007343FF /* info.png */; };
@@ -203,7 +199,6 @@
 		B5B4FF7D183665A6004757C9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B4FE24183665A5004757C9 /* FontAwesome.ttf */; };
 		B5B4FF7E183665A6004757C9 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B4FE26183665A5004757C9 /* UIColor+BButton.m */; };
 		B5C0231D18372FA9006FEBFF /* Z115PullToRefreshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C0231C18372FA9006FEBFF /* Z115PullToRefreshContentView.m */; };
-		B5D4CACD184795630017CFC6 /* Z115InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */; };
 		B5D82A4A18360D2C00579343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D82A4918360D2C00579343 /* Foundation.framework */; };
 		B5D82A4C18360D2C00579343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D82A4B18360D2C00579343 /* CoreGraphics.framework */; };
 		B5D82A4E18360D2C00579343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D82A4D18360D2C00579343 /* UIKit.framework */; };
@@ -262,11 +257,6 @@
 		4B5F3AD91837FA810096A4B3 /* menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menu.plist; sourceTree = "<group>"; };
 		4B839A3418478DBE00007B48 /* mainbg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainbg@2x.png"; sourceTree = "<group>"; };
 		4B839A3518478DBE00007B48 /* mainbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mainbg.png; sourceTree = "<group>"; };
-		4B839A3D184796F800007B48 /* Z115ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115ContactViewController.h; sourceTree = "<group>"; };
-		4B839A3E184796F800007B48 /* Z115ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115ContactViewController.m; sourceTree = "<group>"; };
-		4B839A3F184796F800007B48 /* Z115ContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Z115ContactViewController.xib; sourceTree = "<group>"; };
-		4B839A4218479EDB00007B48 /* submitbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = submitbtn.png; sourceTree = "<group>"; };
-		4B839A4318479EDB00007B48 /* submitbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submitbtn@2x.png"; sourceTree = "<group>"; };
 		4BC8E6A418390CA40050761D /* PT Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Sans.ttf"; sourceTree = "<group>"; };
 		4BCD31CC183904B4007343FF /* iconTab2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTab2.png; sourceTree = "<group>"; };
 		4BCD31CD183904B4007343FF /* info_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_s.png; sourceTree = "<group>"; };
@@ -530,8 +520,6 @@
 		B5B4FF6B183665A6004757C9 /* YISplashScreenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YISplashScreenAnimation.m; sourceTree = "<group>"; };
 		B5C0231B18372FA9006FEBFF /* Z115PullToRefreshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115PullToRefreshContentView.h; sourceTree = "<group>"; };
 		B5C0231C18372FA9006FEBFF /* Z115PullToRefreshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115PullToRefreshContentView.m; sourceTree = "<group>"; };
-		B5D4CACB184795630017CFC6 /* Z115InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115InfoViewController.h; sourceTree = "<group>"; };
-		B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115InfoViewController.m; sourceTree = "<group>"; };
 		B5D82A4618360D2C00579343 /* Orthopaedic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orthopaedic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D82A4918360D2C00579343 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5D82A4B18360D2C00579343 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -837,11 +825,6 @@
 				B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */,
 				B5AC7BAB1839D60100DF420A /* Z115ViewController.h */,
 				B5AC7BAC1839D60100DF420A /* Z115ViewController.m */,
-				B5D4CACB184795630017CFC6 /* Z115InfoViewController.h */,
-				B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */,
-				4B839A3D184796F800007B48 /* Z115ContactViewController.h */,
-				4B839A3E184796F800007B48 /* Z115ContactViewController.m */,
-				4B839A3F184796F800007B48 /* Z115ContactViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1199,8 +1182,6 @@
 		B5E6166F183A37CE008B15E9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				4B839A4218479EDB00007B48 /* submitbtn.png */,
-				4B839A4318479EDB00007B48 /* submitbtn@2x.png */,
 				4B839A3418478DBE00007B48 /* mainbg@2x.png */,
 				4B839A3518478DBE00007B48 /* mainbg.png */,
 				4B1F5812183E13BA00451E0C /* backbtn@2x.png */,
@@ -1356,7 +1337,6 @@
 				B5B4022C1836850A004757C9 /* 212-action2-grey@2x.png in Resources */,
 				B5B402451836850A004757C9 /* Single_Tap@2x.png in Resources */,
 				4BCD31DC183904B4007343FF /* mainnavbg.png in Resources */,
-				4B839A4518479EDB00007B48 /* submitbtn@2x.png in Resources */,
 				B5B4021C1836850A004757C9 /* 09-chat-2-white@2x.png in Resources */,
 				B5B4023D1836850A004757C9 /* default-user.png in Resources */,
 				B5B402371836850A004757C9 /* 339-exit-fullscreen.png in Resources */,
@@ -1380,7 +1360,6 @@
 				4BEF5FA21838D2BB00B90B08 /* shop@2x.png in Resources */,
 				B5B379FE18373D020032688F /* Default.png in Resources */,
 				B5D82A6218360D2C00579343 /* Images.xcassets in Resources */,
-				4B839A41184796F800007B48 /* Z115ContactViewController.xib in Resources */,
 				B5B37A0118373D020032688F /* icon-ipad.png in Resources */,
 				B5B402301836850A004757C9 /* 213-reply@2x.png in Resources */,
 				B5B4022B1836850A004757C9 /* 212-action2-grey.png in Resources */,
@@ -1434,7 +1413,6 @@
 				B5B402471836850A004757C9 /* Spread@2x.png in Resources */,
 				B5B402281836850A004757C9 /* 211-action-grey@2x.png in Resources */,
 				B5B4023C1836850A004757C9 /* default-post-image@2x.png in Resources */,
-				4B839A4418479EDB00007B48 /* submitbtn.png in Resources */,
 				B5B402381836850A004757C9 /* 339-exit-fullscreen@2x.png in Resources */,
 				4B5F3ACC1837F7800096A4B3 /* mainnavtitle@2x.png in Resources */,
 				B5B402201836850A004757C9 /* 39-back-white@2x.png in Resources */,
@@ -1536,13 +1514,11 @@
 				B5B401BA18366E69004757C9 /* AFPropertyListRequestOperation.m in Sources */,
 				B5B4003B183665A6004757C9 /* YISplashScreen.m in Sources */,
 				B5B401DC1836780A004757C9 /* Z115PostListViewController.m in Sources */,
-				4B839A40184796F800007B48 /* Z115ContactViewController.m in Sources */,
 				4B5F3AD71837FA120096A4B3 /* ViewControllerWithNavbar.m in Sources */,
 				B5D82A92183612D400579343 /* Z115WordPressImage.m in Sources */,
 				B554B2991839162500F0D0AD /* NIDataStructures.m in Sources */,
 				B554B2B21839162500F0D0AD /* NIToolbarPhotoViewController.m in Sources */,
 				B5B401B818366E69004757C9 /* AFJSONRequestOperation.m in Sources */,
-				B5D4CACD184795630017CFC6 /* Z115InfoViewController.m in Sources */,
 				B5B4025918368CF3004757C9 /* TTTAttributedLabel.m in Sources */,
 				B5D82A5A18360D2C00579343 /* AppDelegate.m in Sources */,
 				B5B401E31836805C004757C9 /* Z115PostListDataSource.m in Sources */,
@@ -1744,7 +1720,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/tient/Documents/FacebookSDK,

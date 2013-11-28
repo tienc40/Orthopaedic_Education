@@ -837,11 +837,14 @@
 				B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */,
 				B5AC7BAB1839D60100DF420A /* Z115ViewController.h */,
 				B5AC7BAC1839D60100DF420A /* Z115ViewController.m */,
-				B5D4CACB184795630017CFC6 /* Z115InfoViewController.h */,
-				B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */,
+<<<<<<< HEAD
 				4B839A3D184796F800007B48 /* Z115ContactViewController.h */,
 				4B839A3E184796F800007B48 /* Z115ContactViewController.m */,
 				4B839A3F184796F800007B48 /* Z115ContactViewController.xib */,
+=======
+				B5D4CACB184795630017CFC6 /* Z115InfoViewController.h */,
+				B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */,
+>>>>>>> d493f162280bd49693566396a38a13c1fc40ec08
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
