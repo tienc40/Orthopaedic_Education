@@ -153,6 +153,7 @@
                       forKeyPath:@"frame"
                          options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld | NSKeyValueObservingOptionPrior
                          context:NULL];
+    [self.scrollView setBackgroundColor:[UIColor clearColor]];
     
     self.loadNextView = [[UIView alloc] initWithFrame:CGRectMake(0, -50.0f, self.view.frame.size.width, 50.0f)];
     CAGradientLayer *gradient = [CAGradientLayer layer];

@@ -85,6 +85,7 @@
     [self.view addSubview:backgroundImage];
     [self.view sendSubviewToBack:backgroundImage];
     [self.view setBackgroundColor:[UIColor clearColor]];
+//    [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg.png"]];
 }
 
 -(void)viewWillAppear:(BOOL)animated

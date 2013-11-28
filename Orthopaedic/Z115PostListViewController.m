@@ -110,6 +110,8 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self.dataSource;
     
+    self.tableView.backgroundColor = [UIColor clearColor];
+    
     [self loadPosts:NO];
     
 }
