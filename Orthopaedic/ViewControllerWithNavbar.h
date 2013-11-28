@@ -11,7 +11,7 @@
 @interface ViewControllerWithNavbar : UIViewController <UINavigationControllerDelegate,TableMenuDelegate>
 
 @property (strong, nonatomic) TableMenu* tableMenu;
-
+@property (strong, nonatomic) UIBarButtonItem *negativeSpacer;
 - (void)resetBarItem;
 - (void)setBackButton;
 - (void)back;

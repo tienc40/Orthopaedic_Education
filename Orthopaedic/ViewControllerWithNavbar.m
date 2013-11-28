@@ -12,7 +12,6 @@
 #import "AppDelegate.h"
 #import "Z115PostListViewController.h"
 
-#define MENU_WIDTH 50
 
 @interface ViewControllerWithNavbar ()<UISearchBarDelegate>
 {
@@ -24,7 +23,7 @@
 @property (strong, nonatomic) UIButton *categoryBtn;
 @property (strong, nonatomic) UIButton *backBtn;
 @property (strong, nonatomic) UISearchBar *searchBar;
-@property (strong, nonatomic) UIBarButtonItem *negativeSpacer;
+
 
 
 @end
@@ -117,9 +116,10 @@
         
         
         UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithCustomView:self.searchBtn];
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,searchItem, nil];
         
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,categoryMenu,nil];
-        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,searchItem, nil];
+
     }];
 }
 
