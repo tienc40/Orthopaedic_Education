@@ -199,6 +199,7 @@
 		B5B4FF7D183665A6004757C9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B4FE24183665A5004757C9 /* FontAwesome.ttf */; };
 		B5B4FF7E183665A6004757C9 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B5B4FE26183665A5004757C9 /* UIColor+BButton.m */; };
 		B5C0231D18372FA9006FEBFF /* Z115PullToRefreshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C0231C18372FA9006FEBFF /* Z115PullToRefreshContentView.m */; };
+		B5D4CACD184795630017CFC6 /* Z115InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */; };
 		B5D82A4A18360D2C00579343 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D82A4918360D2C00579343 /* Foundation.framework */; };
 		B5D82A4C18360D2C00579343 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D82A4B18360D2C00579343 /* CoreGraphics.framework */; };
 		B5D82A4E18360D2C00579343 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5D82A4D18360D2C00579343 /* UIKit.framework */; };
@@ -520,6 +521,8 @@
 		B5B4FF6B183665A6004757C9 /* YISplashScreenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YISplashScreenAnimation.m; sourceTree = "<group>"; };
 		B5C0231B18372FA9006FEBFF /* Z115PullToRefreshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115PullToRefreshContentView.h; sourceTree = "<group>"; };
 		B5C0231C18372FA9006FEBFF /* Z115PullToRefreshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115PullToRefreshContentView.m; sourceTree = "<group>"; };
+		B5D4CACB184795630017CFC6 /* Z115InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115InfoViewController.h; sourceTree = "<group>"; };
+		B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115InfoViewController.m; sourceTree = "<group>"; };
 		B5D82A4618360D2C00579343 /* Orthopaedic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Orthopaedic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D82A4918360D2C00579343 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B5D82A4B18360D2C00579343 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -825,6 +828,8 @@
 				B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */,
 				B5AC7BAB1839D60100DF420A /* Z115ViewController.h */,
 				B5AC7BAC1839D60100DF420A /* Z115ViewController.m */,
+				B5D4CACB184795630017CFC6 /* Z115InfoViewController.h */,
+				B5D4CACC184795630017CFC6 /* Z115InfoViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1519,6 +1524,7 @@
 				B554B2991839162500F0D0AD /* NIDataStructures.m in Sources */,
 				B554B2B21839162500F0D0AD /* NIToolbarPhotoViewController.m in Sources */,
 				B5B401B818366E69004757C9 /* AFJSONRequestOperation.m in Sources */,
+				B5D4CACD184795630017CFC6 /* Z115InfoViewController.m in Sources */,
 				B5B4025918368CF3004757C9 /* TTTAttributedLabel.m in Sources */,
 				B5D82A5A18360D2C00579343 /* AppDelegate.m in Sources */,
 				B5B401E31836805C004757C9 /* Z115PostListDataSource.m in Sources */,
