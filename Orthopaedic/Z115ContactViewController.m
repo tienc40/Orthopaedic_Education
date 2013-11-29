@@ -7,7 +7,7 @@
 //
 
 #import "Z115ContactViewController.h"
-
+#import "AppDelegate.h"
 @interface Z115ContactViewController ()
 {
     int originY;
@@ -61,6 +61,16 @@
     self.txtEnquiry.enablesReturnKeyAutomatically = NO;
     
     self.txtEnquiry.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed: @"ta.png"]];
+    self.txtEnquiry.textContainerInset = UIEdgeInsetsMake(7, 2, 0, 0);
+    
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 7, 20)];
+    UIView *paddingView2 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 7, 20)];
+    
+    self.txtName.leftView = paddingView;
+    self.txtName.leftViewMode = UITextFieldViewModeAlways;
+    self.txtEmail.leftView = paddingView2;
+    self.txtEmail.leftViewMode = UITextFieldViewModeAlways;
+   
     
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -70,6 +80,8 @@
 - (void) settingAction
 {
     NSLog(@"setting action");
+    [self.tabBarController setSelectedIndex:3];
+    
 }
 
 
