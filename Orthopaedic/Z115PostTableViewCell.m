@@ -69,9 +69,9 @@
     self.storyComments.text = nil;
     self.storyImage.image = [UIImage imageNamed:@"default-post-image.png"];
     
-    self.storyDate.$y = self.storyTitle.$bottom;
-    self.storyComments.$y = self.storyTitle.$bottom;
-    self.storyImage.$y = self.storyDate.$bottom + 5.0f;
+    //self.storyDate.$y = self.storyTitle.$bottom;
+    //self.storyComments.$y = self.storyTitle.$bottom;
+    //self.storyImage.$y = self.storyDate.$bottom + 5.0f;
     
 }
 
