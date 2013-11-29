@@ -19,6 +19,7 @@
 
 #import "Z115PostTableViewCell.h"
 #import "Z115LoadMoreCell.h"
+#import "Z115StarButton.h"
 
 #import "Z115WordPressPost.h"
 #import "Z115WordPressCategory.h"
@@ -262,7 +263,7 @@
     
     CGSize requiredSize = [storyTitle sizeThatFits:CGSizeMake(300.0f, CGFLOAT_MAX)];
     
-    return 194.0f + requiredSize.height;
+    return 204.0f + requiredSize.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -300,6 +301,10 @@
     [self loadPosts:NO];
 }
 
+- (IBAction)startButtonTapped:(id)sender {
+
+    [sender switchStar];
+}
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
