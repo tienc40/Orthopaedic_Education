@@ -151,7 +151,6 @@
 		B3AACA276C6C4AC89D17B995 /* DTTiledLayerWithoutFade.h in Headers */ = {isa = PBXBuildFile; fileRef = F691F30D542940AE86D0BB8B /* DTTiledLayerWithoutFade.h */; };
 		B3E13686580F485193F30E5A /* DTCoreTextParagraphStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = FCB8167FEE0A4E7D99C774A7 /* DTCoreTextParagraphStyle.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
 		B4AAD78374FD45A19DBE2972 /* DTAccessibilityElement.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FFB84BCB4EC4846A72B94D4 /* DTAccessibilityElement.h */; };
-		B546A8A71848656500175707 /* Z115WordPressPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B546A8A61848656500175707 /* Z115WordPressPost.m */; };
 		BB8818C2C488488386E46B13 /* NSCharacterSet+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0F5FB64FE747E5BE709E73 /* NSCharacterSet+HTML.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
 		BD1E35547CF840F192CC1B36 /* DTCoreTextLayoutFrame+Cursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 45C89AACBD0C496F8AE4383D /* DTCoreTextLayoutFrame+Cursor.h */; };
 		BF1C1E6F956645C3895A6333 /* NSString+DTPaths.h in Headers */ = {isa = PBXBuildFile; fileRef = C8AD382B12454BED9A59E5A6 /* NSString+DTPaths.h */; };
@@ -382,8 +381,6 @@
 		B34BC623B0914D25B702D4A3 /* DTAttributedTextCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DTAttributedTextCell.m; path = Core/Source/DTAttributedTextCell.m; sourceTree = "<group>"; };
 		B361799CA8C24BEB9DD7B59A /* DTColor+Compatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DTColor+Compatibility.h"; path = "Core/Source/DTColor+Compatibility.h"; sourceTree = "<group>"; };
 		B480C85A391E40B986B4D626 /* DTHTMLParserTextNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTHTMLParserTextNode.h; path = Core/Source/DTHTMLParserTextNode.h; sourceTree = "<group>"; };
-		B546A8A51848656500175707 /* Z115WordPressPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115WordPressPost.h; sourceTree = "<group>"; };
-		B546A8A61848656500175707 /* Z115WordPressPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPressPost.m; sourceTree = "<group>"; };
 		B5EB8B39485A4592B5C6CDA3 /* DTColor+Compatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "DTColor+Compatibility.m"; path = "Core/Source/DTColor+Compatibility.m"; sourceTree = "<group>"; };
 		B6B70287F6F3428782E3486A /* DTTextBlock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DTTextBlock.h; path = Core/Source/DTTextBlock.h; sourceTree = "<group>"; };
 		B814905E5D8A471FB08FC3F8 /* libPods-DTCoreText.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DTCoreText.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -485,8 +482,6 @@
 			isa = PBXGroup;
 			children = (
 				756EE33E87A6417B86210CDA /* Podfile */,
-				B546A8A51848656500175707 /* Z115WordPressPost.h */,
-				B546A8A61848656500175707 /* Z115WordPressPost.m */,
 				58E4CF1206624574AC4BDD01 /* Frameworks */,
 				95E11838747941ADBFEC47C7 /* Pods */,
 				E9717FB3C5DB4F369E702ED8 /* Products */,
@@ -1067,7 +1062,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B546A8A71848656500175707 /* Z115WordPressPost.m in Sources */,
 				E0015753AABB4096A67C9C41 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
