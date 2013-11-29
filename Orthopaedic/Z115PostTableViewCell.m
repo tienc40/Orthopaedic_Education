@@ -59,6 +59,22 @@
     // Configure the view for the selected state
 }
 
+- (void)prepareForReuse
+{
+    [super prepareForReuse];
+    
+    self.storyTitle.text = nil;
+    self.storyTitle.frame = CGRectMake(10.0f, 10.0f, 300.0f, 42.0f);
+    self.storyDate.text = nil;
+    self.storyComments.text = nil;
+    self.storyImage.image = [UIImage imageNamed:@"default-post-image.png"];
+    
+    self.storyDate.$y = self.storyTitle.$bottom;
+    self.storyComments.$y = self.storyTitle.$bottom;
+    self.storyImage.$y = self.storyDate.$bottom + 5.0f;
+    
+}
+
 
 - (void)showPost:(Z115WordPressPost *)post
 {
