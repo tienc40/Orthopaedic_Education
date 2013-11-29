@@ -20,12 +20,13 @@
     #import <QuartzCore/QuartzCore.h>
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
-    //#import "DTCoreText.h"
-    //#import "NimbusCore.h"
-    //#import "NimbusPhotos.h"
+    #import "CoreData+MagicalRecord.h"
+    #import "DTCoreText.h"
+    #import "NimbusCore.h"
+    #import "NimbusPhotos.h"
     #import "UIImageView+AFNetworking.h"
-    //#import "Z115WordPress.h"
-    //#import "UIViewController+KMWordPress.h"
+    #import "Z115WordPress.h"
+    //#import "UIViewController+Z115WordPress.h"
     //#import "UIView+SMFrameAdditions.h"
     #import "Z115WordPressAPIClient.h"
 

@@ -16,6 +16,8 @@
     // Override point for customization after application launch.
     _tabController = (UITabBarController *)self.window.rootViewController;
     _tabController.delegate = self;
+    
+    [MagicalRecord setupAutoMigratingCoreDataStack];
     return YES;
 }
 							
