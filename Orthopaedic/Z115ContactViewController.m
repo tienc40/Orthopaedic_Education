@@ -60,6 +60,8 @@
     self.txtEnquiry.delegate  = self;
     self.txtEnquiry.enablesReturnKeyAutomatically = NO;
     
+    self.txtEnquiry.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed: @"ta.png"]];
+    
 }
 -(void)viewDidAppear:(BOOL)animated
 {
