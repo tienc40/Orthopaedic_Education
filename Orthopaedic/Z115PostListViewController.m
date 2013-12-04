@@ -25,6 +25,8 @@
 #import "Z115WordPressCategory.h"
 #import "Z115WordPressTag.h"
 
+#import "Z115Post.h"
+
 @interface Z115PostListViewController ()
 @property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
 @property (nonatomic, strong) UIView *loadingView;
@@ -321,6 +323,8 @@
     Z115WordPressPost *post = [self.dataSource.items objectAtIndex:indexPath.row];
     
     NSLog(@"Post title = %@",post.titlePlain);
+    
+    
     
 }
 
