@@ -30,6 +30,12 @@
 		4B839A4518479EDB00007B48 /* submitbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A4318479EDB00007B48 /* submitbtn@2x.png */; };
 		4B839A481847ADD900007B48 /* settingnav.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A461847ADD900007B48 /* settingnav.png */; };
 		4B839A491847ADD900007B48 /* settingnav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B839A471847ADD900007B48 /* settingnav@2x.png */; };
+		4BBF431C184FBFDD0063633C /* App-Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF431B184FBFDD0063633C /* App-Icon@2x.png */; };
+		4BBF431E184FC0440063633C /* Sportlight-Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF431D184FC0440063633C /* Sportlight-Icon@2x.png */; };
+		4BBF4320184FC0840063633C /* app-setting-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF431F184FC0840063633C /* app-setting-icon@2x.png */; };
+		4BBF4322184FC14B0063633C /* app-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF4321184FC14B0063633C /* app-icon.png */; };
+		4BBF4324184FC18F0063633C /* app-icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF4323184FC18F0063633C /* app-icon114.png */; };
+		4BBF4326184FC1BE0063633C /* app-icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BBF4325184FC1BE0063633C /* app-icon29.png */; };
 		4BCD31D8183904B4007343FF /* iconTab2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCD31CC183904B4007343FF /* iconTab2.png */; };
 		4BCD31D9183904B4007343FF /* info_s.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCD31CD183904B4007343FF /* info_s.png */; };
 		4BCD31DA183904B4007343FF /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BCD31CE183904B4007343FF /* info.png */; };
@@ -310,6 +316,12 @@
 		4B839A4318479EDB00007B48 /* submitbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "submitbtn@2x.png"; sourceTree = "<group>"; };
 		4B839A461847ADD900007B48 /* settingnav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingnav.png; sourceTree = "<group>"; };
 		4B839A471847ADD900007B48 /* settingnav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingnav@2x.png"; sourceTree = "<group>"; };
+		4BBF431B184FBFDD0063633C /* App-Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "App-Icon@2x.png"; sourceTree = "<group>"; };
+		4BBF431D184FC0440063633C /* Sportlight-Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sportlight-Icon@2x.png"; sourceTree = "<group>"; };
+		4BBF431F184FC0840063633C /* app-setting-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-setting-icon@2x.png"; sourceTree = "<group>"; };
+		4BBF4321184FC14B0063633C /* app-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon.png"; sourceTree = "<group>"; };
+		4BBF4323184FC18F0063633C /* app-icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon114.png"; sourceTree = "<group>"; };
+		4BBF4325184FC1BE0063633C /* app-icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-icon29.png"; sourceTree = "<group>"; };
 		4BC8E6A418390CA40050761D /* PT Sans.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT Sans.ttf"; sourceTree = "<group>"; };
 		4BCD31CC183904B4007343FF /* iconTab2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconTab2.png; sourceTree = "<group>"; };
 		4BCD31CD183904B4007343FF /* info_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info_s.png; sourceTree = "<group>"; };
@@ -1444,6 +1456,12 @@
 		B5E6166F183A37CE008B15E9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4BBF4325184FC1BE0063633C /* app-icon29.png */,
+				4BBF4323184FC18F0063633C /* app-icon114.png */,
+				4BBF4321184FC14B0063633C /* app-icon.png */,
+				4BBF431F184FC0840063633C /* app-setting-icon@2x.png */,
+				4BBF431D184FC0440063633C /* Sportlight-Icon@2x.png */,
+				4BBF431B184FBFDD0063633C /* App-Icon@2x.png */,
 				4BE16F041848C8D600DB446E /* ta.png */,
 				4BE16F0A1848D8A400DB446E /* help.png */,
 				4BE16F081848D89E00DB446E /* help@2x.png */,
@@ -1648,6 +1666,7 @@
 				B5D82A5418360D2C00579343 /* InfoPlist.strings in Resources */,
 				4BCD31E1183904B4007343FF /* shop_s.png in Resources */,
 				B5B402331836850A004757C9 /* 321-like.png in Resources */,
+				4BBF4320184FC0840063633C /* app-setting-icon@2x.png in Resources */,
 				4BCD31DD183904B4007343FF /* message.png in Resources */,
 				4BCD31E2183904B4007343FF /* shop.png in Resources */,
 				B5B4022F1836850A004757C9 /* 213-reply.png in Resources */,
@@ -1669,6 +1688,7 @@
 				B5E4C522184C84B700DDE412 /* star2.png in Resources */,
 				4BCD31DB183904B4007343FF /* item2_s.png in Resources */,
 				4BEF5F841838BF2A00B90B08 /* item2_s@2x.png in Resources */,
+				4BBF4322184FC14B0063633C /* app-icon.png in Resources */,
 				B5B402421836850A004757C9 /* Pinch@2x.png in Resources */,
 				4BCD31D8183904B4007343FF /* iconTab2.png in Resources */,
 				B5B402261836850A004757C9 /* 46-no@2x.png in Resources */,
@@ -1676,6 +1696,7 @@
 				B5B4024E1836850A004757C9 /* Swipe_Up.png in Resources */,
 				B5B4024C1836850A004757C9 /* Swipe_Right.png in Resources */,
 				B5B4021E1836850A004757C9 /* 09-chat-2@2x.png in Resources */,
+				4BBF4326184FC1BE0063633C /* app-icon29.png in Resources */,
 				B5B402441836850A004757C9 /* reload@2x.png in Resources */,
 				4BEF5F8E1838CA4B00B90B08 /* message_s.png in Resources */,
 				B5B4024F1836850A004757C9 /* Swipe_Up@2x.png in Resources */,
@@ -1698,6 +1719,7 @@
 				B5B4023C1836850A004757C9 /* default-post-image@2x.png in Resources */,
 				4B839A4418479EDB00007B48 /* submitbtn.png in Resources */,
 				B5B402381836850A004757C9 /* 339-exit-fullscreen@2x.png in Resources */,
+				4BBF431E184FC0440063633C /* Sportlight-Icon@2x.png in Resources */,
 				4B5F3ACC1837F7800096A4B3 /* mainnavtitle@2x.png in Resources */,
 				B5B402201836850A004757C9 /* 39-back-white@2x.png in Resources */,
 				B5B402411836850A004757C9 /* Pinch.png in Resources */,
@@ -1710,9 +1732,11 @@
 				4BEF5F9E1838D1AE00B90B08 /* info_s@2x.png in Resources */,
 				4BEF5F981838D05100B90B08 /* setting@2x.png in Resources */,
 				4BEF5F901838CAC600B90B08 /* setting_s@2x.png in Resources */,
+				4BBF4324184FC18F0063633C /* app-icon114.png in Resources */,
 				B5B4024B1836850A004757C9 /* Swipe_Left@2x.png in Resources */,
 				4BEF5F7C1838B8EF00B90B08 /* info@2x.png in Resources */,
 				B5B402311836850A004757C9 /* 216-compose.png in Resources */,
+				4BBF431C184FBFDD0063633C /* App-Icon@2x.png in Resources */,
 				B5B402491836850A004757C9 /* Swipe_Down@2x.png in Resources */,
 				B5D82A5D18360D2C00579343 /* Main.storyboard in Resources */,
 				B5B4023B1836850A004757C9 /* default-post-image.png in Resources */,
@@ -2016,7 +2040,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6E6A79363664438BDDC4E9E /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2026,7 +2049,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Orthopaedic/Orthopaedic-Prefix.pch";
 				INFOPLIST_FILE = "Orthopaedic/Orthopaedic-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2036,7 +2059,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F6E6A79363664438BDDC4E9E /* Pods.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2046,7 +2068,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Orthopaedic/Orthopaedic-Prefix.pch";
 				INFOPLIST_FILE = "Orthopaedic/Orthopaedic-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
