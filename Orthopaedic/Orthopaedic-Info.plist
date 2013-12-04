@@ -9,7 +9,24 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
-	<dict/>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>app-icon57</string>
+				<string>app-icon58</string>
+				<string>app-icon80</string>
+				<string>app-icon120</string>
+				<string>app-icon29</string>
+				<string>app-icon114</string>
+				<string>app-icon</string>
+				<string>app-setting-icon</string>
+				<string>Sportlight-Icon</string>
+				<string>App-Icon</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
