@@ -14,9 +14,6 @@
 #define MENU_WIDTH 50
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-
-    #import <UIKit/UIKit.h>
-    #import <Foundation/Foundation.h>
     #import <QuartzCore/QuartzCore.h>
     #import <SystemConfiguration/SystemConfiguration.h>
     #import <MobileCoreServices/MobileCoreServices.h>
@@ -27,7 +24,7 @@
     #import "UIImageView+AFNetworking.h"
     #import "Z115WordPress.h"
     //#import "UIViewController+Z115WordPress.h"
-    //#import "UIView+SMFrameAdditions.h"
+    #import "UIView+SMFrameAdditions.h"
     #import "Z115WordPressAPIClient.h"
 
 #endif

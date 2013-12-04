@@ -7,6 +7,7 @@
 //
 
 #import "Z115StarButton.h"
+#import "Z115WordPressPost.h"
 
 @implementation Z115StarButton
 
@@ -15,6 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        
     }
     return self;
 }
@@ -23,13 +25,12 @@
 {
     if ([self.currentBackgroundImage isEqual:[UIImage imageNamed:@"star1.png"]]) {
         [self setBackgroundImage:[UIImage imageNamed:@"star2.png"] forState:UIControlStateNormal];
-        NSLog(@"Change Start 2");
+
     } else {
         [self setBackgroundImage:[UIImage imageNamed:@"star1.png"] forState:UIControlStateNormal];
-         NSLog(@"Change Start 1");
     }
-}
 
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.

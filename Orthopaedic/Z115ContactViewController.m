@@ -30,13 +30,6 @@
     return self;
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
-{
-    self = [[super initWithCoder:aDecoder] initWithNibName:@"Z115ContactViewController" bundle:nil];
-    if( self ) {
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {

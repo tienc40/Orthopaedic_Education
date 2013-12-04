@@ -10,11 +10,14 @@
 
 @class Z115WordPressPost;
 @class Z115PostListViewController;
+@class Z115StarButton;
 
 @interface Z115PostTableViewCell : UITableViewCell
 
-@property (strong, nonatomic) NSDate * yesterday;
 @property (weak, nonatomic) Z115PostListViewController *parentViewController;
+@property (strong, nonatomic) NSDate * yesterday;
+
+@property (weak, nonatomic) IBOutlet Z115StarButton *starButton;
 
 - (void)showPost:(Z115WordPressPost *)post;
 

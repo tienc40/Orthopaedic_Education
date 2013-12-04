@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class Z115WordPressPost;
+
 @interface Z115StarButton : UIButton
 
 - (void)switchStar;
 
 @end
+
+
+

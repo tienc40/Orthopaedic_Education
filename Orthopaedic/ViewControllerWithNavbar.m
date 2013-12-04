@@ -79,12 +79,13 @@
     [self resetBarItem];
     self.navigationController.delegate = self;
     
-    UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainbg.png"]];
-    [backgroundImage setFrame:self.view.frame];
-    [self.view addSubview:backgroundImage];
-    [self.view sendSubviewToBack:backgroundImage];
+    self.backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainbg.png"]];
+    [self.backgroundImage setFrame:self.view.frame];
+    [self.view addSubview:self.backgroundImage];
+    [self.view sendSubviewToBack:self.backgroundImage];
     [self.view setBackgroundColor:[UIColor clearColor]];
-//    [UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg.png"]];
+    
+    //[UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg.png"]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -194,9 +195,8 @@
 - (void) didSelectItem:(NSNumber *)rowIndex withName:(NSString *)rowName
 {
     self.tableMenu.hidden = YES;
-    AppDelegate *appdelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-     [appdelegate.tabController setSelectedIndex:2];
-     [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
+    [self.tabBarController setSelectedIndex:2];
+    [self.tabBarController.viewControllers[2] popToRootViewControllerAnimated:YES];
 }
 
 

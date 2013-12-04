@@ -15,11 +15,16 @@
 #import "Z115PostTableViewCell.h"
 #import "Z115LoadMoreCell.h"
 
+#import "TTTAttributedLabel.h"
+#import "Z115StarButton.h"
+
 @interface Z115PostListDataSource()
+
 @property (strong, nonatomic) NSDictionary *params;
 @property (assign, nonatomic) NSInteger postTotal;
 @property (strong, nonatomic) NSDate * yesterday;
 @property (strong, nonatomic) NSDictionary *postIds;
+
 @end
 
 @implementation Z115PostListDataSource
@@ -73,7 +78,7 @@
     self.page = (more) ? self.page + 1 : 1;
     
     NSMutableDictionary *fetchParams  = self.params.mutableCopy;
-    fetchParams[@"page"] = [NSString stringWithFormat:@"%d", self.page];
+    fetchParams[@"page"] = [NSString stringWithFormat:@"%ld", (long)self.page];
     
     
     __block Z115PostListDataSource *blockSelf = self;
@@ -209,23 +214,40 @@
 {
     if (indexPath.row < [self.items count])
     {
-        Z115PostTableViewCell *cell = (Z115PostTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Z115PostTableViewCell"];
+        
+        Z115WordPressPost *post = [self.items objectAtIndex:indexPath.row];
+        
+        TTTAttributedLabel *storyTitle = [[TTTAttributedLabel alloc] init];
+        storyTitle.font = [UIFont boldSystemFontOfSize:17.0f];
+        storyTitle.numberOfLines = 2;
+        storyTitle.verticalAlignment = TTTAttributedLabelVerticalAlignmentTop;
+        storyTitle.text = [post.titlePlain stringByReplacingHTMLEntities];
+        
+        CGSize requiredSize = [storyTitle sizeThatFits:CGSizeMake(268.0f, CGFLOAT_MAX)];
+        float rowHeight = 194.0f + requiredSize.height;
+        
+        NSString *cellIdentifier = @"Z115PostTableViewCell2";
+        if(rowHeight == 234) {
+            cellIdentifier = @"Z115PostTableViewCell";
+        }
+    
+        Z115PostTableViewCell *cell = (Z115PostTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
         
         cell.yesterday = self.yesterday;
         cell.parentViewController = self.postViewController;
         
-        Z115WordPressPost *post = [self.items objectAtIndex:indexPath.row];
-        
         [cell showPost:post];
-        
+
         return cell;
     }
     else
     {
+        
         Z115LoadMoreCell *cell = (Z115LoadMoreCell *)[tableView dequeueReusableCellWithIdentifier:@"Z115LoadMoreCell"];
         [cell.activityIndicator startAnimating];
         
         return cell;
+        
     }
 }
 @end

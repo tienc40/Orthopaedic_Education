@@ -85,6 +85,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    [self.backgroundImage setHidden:YES];
+    [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     self.dataSource = [Z115PostListDataSource new];
     self.dataSource.postViewController = self;
     
@@ -261,9 +264,8 @@
     storyTitle.verticalAlignment = TTTAttributedLabelVerticalAlignmentTop;
     storyTitle.text = [post.titlePlain stringByReplacingHTMLEntities];
     
-    CGSize requiredSize = [storyTitle sizeThatFits:CGSizeMake(300.0f, CGFLOAT_MAX)];
-    
-    return 204.0f + requiredSize.height;
+    CGSize requiredSize = [storyTitle sizeThatFits:CGSizeMake(268.0f, CGFLOAT_MAX)];
+    return 194.0f + requiredSize.height;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -301,14 +303,25 @@
     [self loadPosts:NO];
 }
 
-- (IBAction)startButtonTapped:(id)sender {
 
-    [sender switchStar];
-}
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
     [self searchByText:searchBar.text];
+}
+
+- (IBAction)starButtonTapped:(id)sender {
+    
+    Z115StarButton *button = (Z115StarButton *)sender;
+    [button switchStar];
+    
+    Z115PostTableViewCell *cell = (Z115PostTableViewCell *)button.superview.superview.superview;
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    
+    Z115WordPressPost *post = [self.dataSource.items objectAtIndex:indexPath.row];
+    
+    NSLog(@"Post title = %@",post.titlePlain);
+    
 }
 
 

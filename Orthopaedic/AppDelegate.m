@@ -14,10 +14,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [MagicalRecord setupCoreDataStack];
+    
+    
     _tabController = (UITabBarController *)self.window.rootViewController;
     _tabController.delegate = self;
     
-    [MagicalRecord setupAutoMigratingCoreDataStack];
     return YES;
 }
 							

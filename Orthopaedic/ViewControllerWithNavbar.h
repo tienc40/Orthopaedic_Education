@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) TableMenu* tableMenu;
 @property (strong, nonatomic) UIBarButtonItem *negativeSpacer;
+@property (strong, nonatomic) UIImageView *backgroundImage;
 - (void)resetBarItem;
 - (void)setBackButton;
 - (void)back;
