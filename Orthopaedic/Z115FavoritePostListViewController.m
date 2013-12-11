@@ -89,7 +89,7 @@
 	// Do any additional setup after loading the view.
     //[self.backgroundImage setHidden:YES];
     //[self.view setBackgroundColor:[UIColor whiteColor]];
-    
+
     self.dataSource = [Z115PostListDataSource new];
     self.dataSource.postViewController = self;
     

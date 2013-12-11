@@ -24,8 +24,6 @@
 @property (strong, nonatomic) UIButton *backBtn;
 @property (strong, nonatomic) UISearchBar *searchBar;
 
-
-
 @end
 
 

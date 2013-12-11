@@ -65,7 +65,7 @@
 //    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
     
     [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"setting_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"setting1_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting1.png"]];
     [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"shop_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"shop.png"]];
     
     
@@ -73,7 +73,7 @@
     
     [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"setting_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting.png"]];
     [tabBarItem5 setFinishedSelectedImage:[UIImage imageNamed:@"message_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"message.png"]];
-    
+
     
 //    self.delegate = self;
 //    [self addCenterButtonWithImage:[UIImage imageNamed:@"icon3.png"] highlightImage:[UIImage imageNamed:@"icon3_selected.png"]];

@@ -125,6 +125,11 @@
 		B554B2B21839162500F0D0AD /* NIToolbarPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2951839162500F0D0AD /* NIToolbarPhotoViewController.m */; };
 		B554B2B51839197400F0D0AD /* NetworkPhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */; };
 		B554B2BC18391BB200F0D0AD /* Z115WordPress.m in Sources */ = {isa = PBXBuildFile; fileRef = B554B2BB18391BB200F0D0AD /* Z115WordPress.m */; };
+		B55EBAF018586E4C003A0FCC /* setting1_s.png in Resources */ = {isa = PBXBuildFile; fileRef = B55EBAEC18586E4C003A0FCC /* setting1_s.png */; };
+		B55EBAF118586E4C003A0FCC /* setting1_s@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B55EBAED18586E4C003A0FCC /* setting1_s@2x.png */; };
+		B55EBAF218586E4C003A0FCC /* setting1.png in Resources */ = {isa = PBXBuildFile; fileRef = B55EBAEE18586E4C003A0FCC /* setting1.png */; };
+		B55EBAF318586E4C003A0FCC /* setting1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B55EBAEF18586E4C003A0FCC /* setting1@2x.png */; };
+		B55EBAF618586E96003A0FCC /* Z115SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B55EBAF518586E96003A0FCC /* Z115SettingViewController.m */; };
 		B56CB76B184893E10057BCE7 /* Z115StarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B56CB76A184893E10057BCE7 /* Z115StarButton.m */; };
 		B56CB76D18489DCE0057BCE7 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56CB76C18489DCE0057BCE7 /* AssetsLibrary.framework */; };
 		B57017ED18486C9300A5F1F6 /* Z115WordPressPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B57017EC18486C9300A5F1F6 /* Z115WordPressPost.m */; };
@@ -491,6 +496,12 @@
 		B554B2B41839197400F0D0AD /* NetworkPhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkPhotoAlbumViewController.m; sourceTree = "<group>"; };
 		B554B2BA18391BB200F0D0AD /* Z115WordPress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115WordPress.h; sourceTree = "<group>"; };
 		B554B2BB18391BB200F0D0AD /* Z115WordPress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115WordPress.m; sourceTree = "<group>"; };
+		B55EBAEC18586E4C003A0FCC /* setting1_s.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting1_s.png; sourceTree = "<group>"; };
+		B55EBAED18586E4C003A0FCC /* setting1_s@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting1_s@2x.png"; sourceTree = "<group>"; };
+		B55EBAEE18586E4C003A0FCC /* setting1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting1.png; sourceTree = "<group>"; };
+		B55EBAEF18586E4C003A0FCC /* setting1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting1@2x.png"; sourceTree = "<group>"; };
+		B55EBAF418586E96003A0FCC /* Z115SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115SettingViewController.h; sourceTree = "<group>"; };
+		B55EBAF518586E96003A0FCC /* Z115SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115SettingViewController.m; sourceTree = "<group>"; };
 		B56CB769184893E10057BCE7 /* Z115StarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Z115StarButton.h; sourceTree = "<group>"; };
 		B56CB76A184893E10057BCE7 /* Z115StarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Z115StarButton.m; sourceTree = "<group>"; };
 		B56CB76C18489DCE0057BCE7 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -1090,6 +1101,8 @@
 				4B839A3E184796F800007B48 /* Z115ContactViewController.m */,
 				B546A84518485CD900175707 /* Z115FavoritePostListViewController.h */,
 				B546A84618485CD900175707 /* Z115FavoritePostListViewController.m */,
+				B55EBAF418586E96003A0FCC /* Z115SettingViewController.h */,
+				B55EBAF518586E96003A0FCC /* Z115SettingViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -1127,6 +1140,10 @@
 		B5B401E5183684F2004757C9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B55EBAEC18586E4C003A0FCC /* setting1_s.png */,
+				B55EBAED18586E4C003A0FCC /* setting1_s@2x.png */,
+				B55EBAEE18586E4C003A0FCC /* setting1.png */,
+				B55EBAEF18586E4C003A0FCC /* setting1@2x.png */,
 				B5E4C51B184C84B700DDE412 /* star1@2x.png */,
 				B5E4C51C184C84B700DDE412 /* star2@2x.png */,
 				B5E4C51D184C84B700DDE412 /* star1.png */,
@@ -1622,6 +1639,7 @@
 			files = (
 				4B1F5814183E13BA00451E0C /* backbtn@2x.png in Resources */,
 				B5B402251836850A004757C9 /* 46-no.png in Resources */,
+				B55EBAF018586E4C003A0FCC /* setting1_s.png in Resources */,
 				B5B402321836850A004757C9 /* 216-compose@2x.png in Resources */,
 				B5B4023E1836850A004757C9 /* default-user@2x.png in Resources */,
 				4BE16F091848D89E00DB446E /* help@2x.png in Resources */,
@@ -1673,6 +1691,7 @@
 				4BCD31E2183904B4007343FF /* shop.png in Resources */,
 				B5B4022F1836850A004757C9 /* 213-reply.png in Resources */,
 				B5B402401836850A004757C9 /* Hold_Timer@2x.png in Resources */,
+				B55EBAF118586E4C003A0FCC /* setting1_s@2x.png in Resources */,
 				B5B402351836850A004757C9 /* 338-enter-fullscreen.png in Resources */,
 				B5B37A0218373D020032688F /* icon-ipad@2x.png in Resources */,
 				4BEF5FA01838D26100B90B08 /* shop_s@2x.png in Resources */,
@@ -1680,6 +1699,7 @@
 				4B839A3618478DBE00007B48 /* mainbg@2x.png in Resources */,
 				4BE16F021848C73B00DB446E /* tf.png in Resources */,
 				4B839A481847ADD900007B48 /* settingnav.png in Resources */,
+				B55EBAF318586E4C003A0FCC /* setting1@2x.png in Resources */,
 				4B839A3718478DBE00007B48 /* mainbg.png in Resources */,
 				B5B402231836850A004757C9 /* 40-forward.png in Resources */,
 				4B5F3AD01837F7800096A4B3 /* searchbtn@2x.png in Resources */,
@@ -1744,6 +1764,7 @@
 				B5B4024A1836850A004757C9 /* Swipe_Left.png in Resources */,
 				4B1F580D183E0EA900451E0C /* closebtn@2x.png in Resources */,
 				4BE16F0B1848D8A400DB446E /* help.png in Resources */,
+				B55EBAF218586E4C003A0FCC /* setting1.png in Resources */,
 				4B5F3ACB1837F7800096A4B3 /* mainnavtitle.png in Resources */,
 				B5E6167A183A381A008B15E9 /* default.css in Resources */,
 				B5B37A0418373D020032688F /* icon@2x.png in Resources */,
@@ -1856,6 +1877,7 @@
 				B554B29D1839162500F0D0AD /* NIFoundationMethods.m in Sources */,
 				4BEF5F5D1838940200B90B08 /* TableMenu.m in Sources */,
 				B546A88F184863A600175707 /* NSObject+MagicalDataImport.m in Sources */,
+				B55EBAF618586E96003A0FCC /* Z115SettingViewController.m in Sources */,
 				B546A84718485CD900175707 /* Z115FavoritePostListViewController.m in Sources */,
 				B5B401BC18366E69004757C9 /* AFXMLRequestOperation.m in Sources */,
 				B5B40035183665A6004757C9 /* SORelativeDateTransformer.m in Sources */,
