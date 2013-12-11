@@ -27,6 +27,7 @@
 - (id)initWithTagId:(NSNumber *)tagId;
 - (void)endRefresh;
 - (void)loadPosts:(BOOL)more;
+- (void)loadCoreDataPosts;
 - (void)finishedLoad:(BOOL)more;
 - (void)viewPost:(Z115PostTableViewCell *)cell;
 

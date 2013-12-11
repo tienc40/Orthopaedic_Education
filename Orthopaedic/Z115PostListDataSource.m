@@ -18,6 +18,8 @@
 #import "TTTAttributedLabel.h"
 #import "Z115StarButton.h"
 
+#import "Z115Post.h"
+
 @interface Z115PostListDataSource()
 
 @property (strong, nonatomic) NSDictionary *params;
@@ -65,6 +67,38 @@
 - (void)fetchTag:(NSNumber *)tagId
 {
     self.params = @{@"json" : @"get_tag_posts", @"id" : tagId};
+}
+
+- (void)loadPostFromCoreData
+{
+    __block Z115PostListDataSource *blockSelf = self;
+    
+    NSArray *posts = [Z115Post MR_findAll];
+    
+    [posts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        
+        Z115Post *coreDataPost = (Z115Post *)obj;
+        
+        Z115WordPressPost *post = [Z115WordPressPost new];
+        
+        post.content = coreDataPost.content;
+        post.excerpt = coreDataPost.excerpt;
+        post.modified = coreDataPost.modified;
+        post.postDate = coreDataPost.postDate;
+        post.postHtml = coreDataPost.postHtml;
+        post.slug = coreDataPost.slug;
+        post.status = coreDataPost.status;
+        post.thumbnail = coreDataPost.thumbnail;
+        post.title = coreDataPost.title;
+        post.titlePlain = coreDataPost.titlePlain;
+        post.z115WordPressPostId = coreDataPost.z115WordPressPostId;
+        
+        [blockSelf addPost:post];
+        
+        NSLog(@"Title = %@",post.titlePlain);
+        
+    }];
+    
 }
 
 - (void)loadMore:(BOOL)more withSuccess:(void (^)(void))success withFailure:(void (^)(NSError *error))failure
@@ -235,6 +269,18 @@
         
         cell.yesterday = self.yesterday;
         cell.parentViewController = self.postViewController;
+        [cell.starButton switchOff];
+
+        
+        Z115Post *coreDataPost = [Z115Post findFirstByAttribute:@"z115WordPressPostId" withValue:post.z115WordPressPostId];
+        
+        if(coreDataPost != nil) {
+            [cell.starButton switchOn];
+        }
+        
+        //NSLog(@"coreDataPost = %@",coreDataPost);
+        //NSLog(@"Post = %@",post.titlePlain);
+        //NSLog(@"===================================");
         
         [cell showPost:post];
 

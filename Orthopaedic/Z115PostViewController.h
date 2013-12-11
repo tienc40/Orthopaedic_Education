@@ -10,6 +10,7 @@
 
 @class Z115WordPressPost;
 @class Z115PostListDataSource;
+@class Z115StarButton;
 
 @protocol PostListDelegate
 @required
@@ -25,7 +26,6 @@
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) UIView *loadPreviousView;
 @property (nonatomic, strong) UIView *loadNextView;
-@property (nonatomic, strong) IBOutlet UIWebView *webView;
 
 - (id)initWithPost:(Z115WordPressPost *)post;
 - (id)initWithPostUrl:(NSURL *)url;

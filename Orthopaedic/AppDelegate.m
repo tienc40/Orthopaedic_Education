@@ -16,7 +16,6 @@
     // Override point for customization after application launch.
     [MagicalRecord setupAutoMigratingCoreDataStack];
     
-    
     _tabController = (UITabBarController *)self.window.rootViewController;
     _tabController.delegate = self;
     
@@ -48,15 +47,12 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    [MagicalRecord cleanUp];
 }
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-
-    NSLog(@"hello world");
-
+    //NSLog(@"hello world");
 }
-
-
 
 @end

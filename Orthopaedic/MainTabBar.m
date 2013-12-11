@@ -65,7 +65,7 @@
 //    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
     
     [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
-    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"shop_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"shop.png"]];
+    [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"setting_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting.png"]];
     [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"shop_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"shop.png"]];
     
     

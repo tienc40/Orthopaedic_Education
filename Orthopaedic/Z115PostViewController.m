@@ -23,11 +23,16 @@
 
 #import "AppDelegate.h"
 
+#import "Z115Post.h"
+#import "Z115StarButton.h"
+
 @interface Z115PostViewController ()
+
+@property (nonatomic, strong)  UIScrollView *scrollView;
+@property (nonatomic, strong)  UIWebView *webView;
 
 @property (nonatomic, strong) NSString *postId;
 @property (nonatomic, strong) NSURL *postUrl;
-@property (nonatomic, strong) UIScrollView *scrollView;
 
 @property (strong, nonatomic) UILabel *previousTitleLabel;
 @property (strong, nonatomic) UILabel *nextTitleLabel;
@@ -38,6 +43,9 @@
 
 @property (nonatomic, strong) UIWebView *nextWebView;
 @property (nonatomic, strong) UIWebView *previousWebView;
+
+@property (strong, nonatomic) Z115StarButton *starButton;
+
 @end
 
 @implementation Z115PostViewController
@@ -122,17 +130,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
+    self.title = self.post.title;
     [self setBackButton];
+    
    
-    self.view.backgroundColor = [UIColor whiteColor];
+    //self.view.backgroundColor = [UIColor whiteColor];
     
 	// Do any additional setup after loading the view.
     self.webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     self.webView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     self.webView.backgroundColor = [UIColor clearColor];
-    self.webView.delegate = self;
     [self.webView.scrollView setShowsHorizontalScrollIndicator:NO];
+    self.webView.scalesPageToFit = YES;
+    self.webView.delegate = self;
     
     for (UIView *view in [self.webView.scrollView subviews])
     {
@@ -236,7 +247,18 @@
     
     [self attachBackSwipe:self.webView];
     
-    self.title = self.post.title;
+    
+    self.starButton = [[Z115StarButton alloc] initWithFrame:CGRectMake(278, 10, 32, 42)];
+    [self.starButton addTarget:self action:@selector(starButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.starButton];
+    [self.view bringSubviewToFront:self.starButton];
+    
+    
+    Z115Post *coreDataPost = [Z115Post findFirstByAttribute:@"z115WordPressPostId" withValue:self.post.z115WordPressPostId];
+    
+    if(coreDataPost != nil) {
+        [self.starButton switchOn];
+    }
     
 }
 
@@ -263,7 +285,20 @@
     return NO;
 }
 
+-(void)starButtonTapped:(id)sender
+{
 
+    Z115StarButton *button = (Z115StarButton *)sender;
+    
+    if([button switchStar]) {
+        [button savePost:self.post];
+    } else {
+        [button deletePost:self.post];
+    }
+    
+    self.dataSource.updates = YES;
+    
+}
 
 - (BOOL)canLoadNext
 {
@@ -348,11 +383,8 @@
     
     [self.webView loadHTMLString:[self.post generateHtml:self.fontSize] baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
     
-    
     self.loadPreviousView.hidden = ![self canLoadPrevious];
     self.loadNextView.hidden = ![self canLoadNext];
-    
-
 }
 
 #pragma mark - UIWebViewDelegate
@@ -405,13 +437,12 @@
             || [ext isEqualToString:@"png"]
             || [ext isEqualToString:@"gif"])
         {
-           /* if (!self.buttonControl.buttonsVisible)
+            /* if (!self.buttonControl.buttonsVisible)
             {
                 NetworkPhotoAlbumViewController *detailViewController = [[NetworkPhotoAlbumViewController alloc] initWithPost:self.post
                                                                                                                  startAtIndex:[self.post findAttachmentIndex:[[request URL] absoluteString]]];
                 [self.navigationController pushViewController:detailViewController animated:YES];
             } */
-            
         }
         else
         {

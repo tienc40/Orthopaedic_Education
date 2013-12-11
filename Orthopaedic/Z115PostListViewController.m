@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 TienT. All rights reserved.
 //
 
+
 #import "Z115PostListViewController.h"
 #import "Z115PostViewController.h"
 
@@ -24,13 +25,14 @@
 #import "Z115WordPressPost.h"
 #import "Z115WordPressCategory.h"
 #import "Z115WordPressTag.h"
+#import "Z115WordPressPostAuthor.h"
 
 #import "Z115Post.h"
+
 
 @interface Z115PostListViewController ()
 @property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
 @property (nonatomic, strong) UIView *loadingView;
-
 @end
 
 @implementation Z115PostListViewController
@@ -87,8 +89,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [self.backgroundImage setHidden:YES];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    //[self.backgroundImage setHidden:YES];
+    //[self.view setBackgroundColor:[UIColor whiteColor]];
     
     self.dataSource = [Z115PostListDataSource new];
     self.dataSource.postViewController = self;
@@ -118,8 +120,13 @@
     
     self.tableView.backgroundColor = [UIColor clearColor];
     
-    [self loadPosts:NO];
+    [self loadData];
     
+}
+
+- (void)loadData
+{
+    [self loadPosts:NO];
 }
 
 - (void)viewDidUnload {
@@ -140,7 +147,10 @@
         self.dataSource.updates = NO;
         
         [self.tableView reloadData];
+        
     }
+    
+    NSLog(@"FUCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK POST LIST");
 }
 
 - (void)didReceiveMemoryWarning
@@ -195,6 +205,11 @@
                   }];
 }
 
+- (void)loadCoreDataPosts
+{
+    [self.dataSource loadPostFromCoreData];
+}
+
 - (void)finishedLoad:(BOOL)more
 {
     self.dataSource.updates = NO;
@@ -226,7 +241,6 @@
         [self.loadingView addSubview:label];
         self.loadingView.backgroundColor = [UIColor colorWithHexString:@"#226CA4"];
 
-        
         [self.view addSubview:self.loadingView];
         [self.view bringSubviewToFront:self.loadingView];
     }
@@ -267,7 +281,9 @@
     storyTitle.text = [post.titlePlain stringByReplacingHTMLEntities];
     
     CGSize requiredSize = [storyTitle sizeThatFits:CGSizeMake(268.0f, CGFLOAT_MAX)];
+    
     return 194.0f + requiredSize.height;
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -315,19 +331,18 @@
 - (IBAction)starButtonTapped:(id)sender {
     
     Z115StarButton *button = (Z115StarButton *)sender;
-    [button switchStar];
-    
+   
     Z115PostTableViewCell *cell = (Z115PostTableViewCell *)button.superview.superview.superview;
     NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
     
     Z115WordPressPost *post = [self.dataSource.items objectAtIndex:indexPath.row];
     
-    NSLog(@"Post title = %@",post.titlePlain);
-    
-    
-    
+    if([button switchStar]) {
+        [button savePost:post];
+    } else {
+        [button deletePost:post];
+    }
 }
-
 
 #pragma mark -
 #pragma mark MSPullToRefreshDelegate Methods
@@ -360,4 +375,3 @@
 
 
 @end
-

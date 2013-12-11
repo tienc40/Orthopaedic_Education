@@ -29,6 +29,7 @@ typedef void (^Z115FailureBlock)(NSError *error);
 - (void)fetchAuthorPosts:(NSNumber *)authorId;
 - (void)fetchCategory:(NSNumber *)categoryId;
 - (void)fetchTag:(NSNumber *)tagId;
+- (void)loadPostFromCoreData;
 - (void)loadMore:(BOOL)more withSuccess:(void (^)(void))success withFailure:(void (^)(NSError *error))failure;
 - (void)loadPostFromUrl:(NSString *)postUrl withSuccess:(void (^)(Z115WordPressPost* post))success withFailure:(void (^)(NSError *error))failure;
 - (BOOL)canLoadMore;

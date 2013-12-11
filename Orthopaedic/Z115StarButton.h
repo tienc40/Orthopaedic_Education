@@ -12,7 +12,12 @@
 
 @interface Z115StarButton : UIButton
 
-- (void)switchStar;
+- (BOOL)switchStar;
+- (void)switchOn;
+- (void)switchOff;
+
+- (void)savePost:(Z115WordPressPost *)post;
+- (void)deletePost:(Z115WordPressPost *)post;
 
 @end
 
