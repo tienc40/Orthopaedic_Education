@@ -16,8 +16,8 @@
     // Override point for customization after application launch.
     [MagicalRecord setupCoreDataStack];
     
-    _tabController = (UITabBarController *)self.window.rootViewController;
-    _tabController.delegate = self;
+    self.tabController = (UITabBarController *)self.window.rootViewController;
+    self.tabController.delegate = self;
     
     return YES;
 }
