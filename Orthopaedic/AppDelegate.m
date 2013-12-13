@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [MagicalRecord setupAutoMigratingCoreDataStack];
+    [MagicalRecord setupCoreDataStack];
     
     _tabController = (UITabBarController *)self.window.rootViewController;
     _tabController.delegate = self;
@@ -52,7 +52,9 @@
 
 -(void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
-    //NSLog(@"hello world");
+    //[viewController viewWillAppear:YES];
+    //[viewController description];
+    NSLog(@"selected");
 }
 
 @end

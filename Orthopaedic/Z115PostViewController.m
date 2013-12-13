@@ -260,13 +260,23 @@
         [self.starButton switchOn];
     }
     
+  
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"Post view will appear");
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self.webView stopLoading];
-    
+    NSLog(@"Post view will disappear");
     [super viewWillDisappear:animated];
+    [self.webView stopLoading];
+    self.webView.delegate = nil;
     
 }
 
@@ -528,6 +538,7 @@
     }
 }
 
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
@@ -574,8 +585,13 @@
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    [self.webView stopLoading];
+    self.webView.delegate = nil;
+
+    
     [self.navigationController popToRootViewControllerAnimated:YES];
     [self.delegate didSearchPosts:searchBar.text];
+
 
 }
 

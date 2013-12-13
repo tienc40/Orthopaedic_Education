@@ -18,12 +18,6 @@
     int _paddingWith;
     int _marginSearchbar;
 }
-
-@property (strong, nonatomic) UIButton *searchBtn;
-@property (strong, nonatomic) UIButton *categoryBtn;
-@property (strong, nonatomic) UIButton *backBtn;
-@property (strong, nonatomic) UISearchBar *searchBar;
-
 @end
 
 
@@ -54,7 +48,6 @@
     self.navigationController.navigationBar.alpha = 1;
     self.navigationController.navigationBar.translucent = NO;
     
-    
     self.negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
     [self.negativeSpacer setWidth:-_paddingWith];
     
@@ -84,15 +77,6 @@
     [self.view setBackgroundColor:[UIColor clearColor]];
     
     //[UIColor colorWithPatternImage:[UIImage imageNamed:@"mainbg.png"]];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-
-}
-- (void) viewDidAppear:(BOOL)animated
-{
-    
 }
 
 - (void) resetBarItem
@@ -133,7 +117,7 @@
         }];
     
 }
-//hahha
+
 -(void)setBackButton{
     if (!self.backBtn) {
         self.backBtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];
@@ -147,9 +131,8 @@
 
 - (void)back
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
-
 
 #pragma mark right item
 

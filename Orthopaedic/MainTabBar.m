@@ -10,10 +10,8 @@
 #import "AppDelegate.h"
 #import "Z115PostListViewController.h"
 #import "ViewControllerWithNavbar.h"
+
 @interface MainTabBar ()
-{
-    UIButton* centerItem;
-}
 @end
 
 @implementation MainTabBar
@@ -62,21 +60,16 @@
     tabBarItem5.imageInsets = UIEdgeInsetsMake(6, 0, -6, -6);
     
     
-//    [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
     
     [tabBarItem1 setFinishedSelectedImage:[UIImage imageNamed:@"info_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"info.png"]];
     [tabBarItem2 setFinishedSelectedImage:[UIImage imageNamed:@"setting1_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting1.png"]];
-    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"shop_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"shop.png"]];
     
-    
+    [tabBarItem3 setFinishedSelectedImage:[UIImage imageNamed:@"iconTab2.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"iconTab2.png"]];
     [self addCenterButtonWithImage:[UIImage imageNamed:@"iconTab2.png"] highlightImage:nil];
     
     [tabBarItem4 setFinishedSelectedImage:[UIImage imageNamed:@"setting_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"setting.png"]];
     [tabBarItem5 setFinishedSelectedImage:[UIImage imageNamed:@"message_s.png"] withFinishedUnselectedImage:[UIImage imageNamed:@"message.png"]];
 
-    
-//    self.delegate = self;
-//    [self addCenterButtonWithImage:[UIImage imageNamed:@"icon3.png"] highlightImage:[UIImage imageNamed:@"icon3_selected.png"]];
 }
 
 
@@ -89,7 +82,7 @@
 
 -(void) addCenterButtonWithImage:(UIImage*)buttonImage highlightImage:(UIImage*)highlightImage
 {
-    centerItem = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *centerItem = [UIButton buttonWithType:UIButtonTypeCustom];
     centerItem.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
     centerItem.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
     [centerItem setBackgroundImage:buttonImage forState:UIControlStateNormal];
@@ -105,6 +98,7 @@
         centerItem.center = center;
     }
     [centerItem addTarget:self action:@selector(itemCenterAction) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:centerItem];
 }
 
@@ -118,12 +112,14 @@
 #pragma button action
 - (void) itemCenterAction
 {
-    [self hideAllMenu];
-    AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    //[self hideAllMenu];
+    /* AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appdelegate.tabController setSelectedIndex:2]
+    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES]; */
+    [self setSelectedIndex:2];
+    [self.viewControllers[2] popToRootViewControllerAnimated:YES];
+
     
-    [appdelegate.tabController setSelectedIndex:2];
-    [appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
-    //NSLog(@"number vc %d",[appdelegate.tabController.viewControllers count]);
 }
 
 
@@ -134,6 +130,5 @@
         }
     }
 }
-
 
 @end

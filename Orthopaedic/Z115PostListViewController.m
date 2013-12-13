@@ -136,6 +136,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    
     [super viewWillAppear:animated];
     
     [[self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]] setSelected:NO animated:YES];
@@ -151,6 +152,7 @@
     }
     
     NSLog(@"FUCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK POST LIST");
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -208,6 +210,7 @@
 - (void)loadCoreDataPosts
 {
     [self.dataSource loadPostFromCoreData];
+    [self finishedLoad:NO];
 }
 
 - (void)finishedLoad:(BOOL)more
@@ -349,7 +352,7 @@
 
 - (void)pullToRefreshViewDidStartLoading:(SSPullToRefreshView *)view {
     [self.pullToRefreshView startLoading];
-    [self loadPosts:NO];
+    [self loadData];
 }
 
 #pragma mark -

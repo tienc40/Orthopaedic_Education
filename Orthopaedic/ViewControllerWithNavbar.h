@@ -10,10 +10,17 @@
 #import "TableMenu.h"
 @interface ViewControllerWithNavbar : UIViewController <UINavigationControllerDelegate,TableMenuDelegate>
 
+@property (strong, nonatomic) UIButton *searchBtn;
+@property (strong, nonatomic) UIButton *categoryBtn;
+@property (strong, nonatomic) UIButton *backBtn;
+@property (strong, nonatomic) UISearchBar *searchBar;
+
 @property (strong, nonatomic) TableMenu* tableMenu;
 @property (strong, nonatomic) UIBarButtonItem *negativeSpacer;
 @property (strong, nonatomic) UIImageView *backgroundImage;
+
 - (void)resetBarItem;
 - (void)setBackButton;
 - (void)back;
+
 @end

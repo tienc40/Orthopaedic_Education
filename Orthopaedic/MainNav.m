@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    //[[UINavigationBar appearance] setBarTintColor:[UIColor yellowColor]];
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"mainnavbg.png"] forBarMetrics:UIBarMetricsDefault];
     
     // Font
@@ -37,22 +36,9 @@
     UIFont* titleFont = [UIFont fontWithName:@"PT Sans" size:17];
 
     [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:[UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,shadow, NSShadowAttributeName,titleFont, NSFontAttributeName, nil]];
-    
-
-    // Image Title
-    // self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainnavtitle.png"]];
 
 }
 
-- (void) viewWillAppear:(BOOL)animated
-{
-    // add bar button
-}
-//
--(void)viewDidAppear:(BOOL)animated
-{
-
-}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

@@ -73,7 +73,10 @@
 {
     __block Z115PostListDataSource *blockSelf = self;
     
-    NSArray *posts = [Z115Post MR_findAll];
+    [blockSelf reset];
+    
+    NSArray *posts = [Z115Post findAll];
+    NSLog(@"%@",posts);
     
     [posts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         
@@ -95,7 +98,7 @@
         
         [blockSelf addPost:post];
         
-        NSLog(@"Title = %@",post.titlePlain);
+        //NSLog(@"Title = %@",post.titlePlain);
         
     }];
     

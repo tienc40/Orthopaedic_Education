@@ -60,7 +60,7 @@
     
     if(coreDataPost == nil) {
         
-        Z115Post *z115Post = [Z115Post MR_createEntity];
+        Z115Post *z115Post = [Z115Post createEntity];
         z115Post.z115WordPressPostId = post.z115WordPressPostId;
         z115Post.author = post.author.name;
         z115Post.content = post.content;
@@ -74,7 +74,7 @@
         z115Post.title = post.title;
         z115Post.titlePlain = post.titlePlain;
         
-        [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
+        [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
         NSLog(@"Saved");
     }
     
@@ -88,7 +88,8 @@
 - (void)deletePost:(Z115WordPressPost *)post
 {
     Z115Post *z115Post = [Z115Post findFirstByAttribute:@"z115WordPressPostId" withValue:post.z115WordPressPostId];
-    [z115Post MR_deleteEntity];
+    [z115Post deleteEntity];
+    [[NSManagedObjectContext defaultContext] saveToPersistentStoreAndWait];
     NSLog(@"Deleted");
     
     //NSArray *posts = [Z115Post MR_findAll];
