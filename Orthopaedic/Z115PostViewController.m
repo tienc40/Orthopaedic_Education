@@ -82,6 +82,17 @@
         self.index = index;
         self.post = source.items[index];
         
+        self.fontSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"fontsize"];
+        
+        if (!self.fontSize)
+        {
+            self.fontSize = 16.0f;
+        }
+        
+        NSLog(@"fontsize = %f",self.fontSize);
+
+        
+        
     }
     return self;
 }
@@ -98,26 +109,10 @@
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        // Custom initialization
- 
-        self.fontSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"fontsize"];
-        
-        if (!self.fontSize)
-        {
-            self.fontSize = 16.0f;
-        }
-    }
-    return self;
-}
 
 - (void)dealloc
 {
-    NSLog(@"dellocated");
+
     self.webView.delegate = nil;
     self.scrollView.delegate = nil;
     
@@ -571,13 +566,13 @@
     
     NSLog(@"self.fontSize: %f", self.fontSize);
     
-    if (self.fontSize < 16.0f)
+    if (self.fontSize < 15.0f)
     {
-        self.fontSize = 16.0f;
+        self.fontSize = 15.0f;
     }
-    else if (self.fontSize >= 32.0f)
+    else if (self.fontSize >= 35.0f)
     {
-        self.fontSize = 32.0f;
+        self.fontSize = 35.0f;
     }
     
     [[NSUserDefaults standardUserDefaults] setFloat:self.fontSize forKey:@"fontsize"];
