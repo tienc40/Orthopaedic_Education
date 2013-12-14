@@ -323,7 +323,7 @@ static SORelativeDateTransformer *sRelativetDateFormatter = nil;
     {
         NSMutableString *html = @"".mutableCopy;
         
-        [html appendFormat:@"<html><head> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no initial-scale=1.0\" /><script type=\"text/javascript\" src=\"z115wordpress.js\"></script></script><script type=\"text/javascript\">function changeFontSize(newSize) {document.getElementById('singlentry').style.fontSize = newSize + 'px';} function findAnchor( alert('find Anchor'); ) {}</script>"];
+        [html appendFormat:@"<html><head> <meta name=\"viewport\" content=\"width=device-width, user-scalable=no initial-scale=1.0\" /><script type=\"text/javascript\" src=\"z115wordpress.js\"></script></script><script type=\"text/javascript\">function changeFontSize(newSize) {document.getElementById('singlentry').style.fontSize = newSize + 'px';} function findAnchor() { alert('find Anchor'); }</script>"];
         
         [html appendFormat:@"<style>#singlentry {font-size: %dpx;}</style><link href='default.css' rel='stylesheet' type='text/css' />", fontSize];
         

@@ -252,15 +252,12 @@
     [self.view addSubview:self.starButton];
     [self.view bringSubviewToFront:self.starButton];
     
-    self.downButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 150, 39, 50)];
+    self.downButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 140, 34, 44)];
     [self.downButton setImage:[UIImage imageNamed:@"down.png"] forState:UIControlStateNormal];
     [self.downButton addTarget:self action:@selector(downButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.downButton setAlpha:0.5];
     [self.view addSubview:self.downButton];
     [self.view bringSubviewToFront:self.downButton];
-    
-    
-    
-    
     
     
     Z115Post *coreDataPost = [Z115Post findFirstByAttribute:@"z115WordPressPostId" withValue:self.post.z115WordPressPostId];
@@ -311,7 +308,9 @@
 
 - (void)downButtonTapped:(id)sender
 {
-    NSLog(@"tested");
+
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"findAnchor()"]];
+    NSLog(@"down Button");
 }
 
 - (BOOL)canLoadNext

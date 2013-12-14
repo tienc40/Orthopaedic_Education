@@ -10,4 +10,9 @@
 
 @interface Z115SettingViewController : Z115ViewController
 
+@property (weak, nonatomic) IBOutlet UISlider *fontSizeSlider;
+
+@property (weak, nonatomic) IBOutlet UISwitch *arrowPositionSwitcher;
+
+
 @end
