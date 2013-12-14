@@ -107,7 +107,6 @@
 }
 
 #pragma mark leftItem
-
 - (void) categoryBtnAction{
     
         [UIView animateWithDuration:0.4 delay:0 options:UIViewAnimationOptionTransitionNone animations:^{
@@ -164,6 +163,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 #pragma mark -
 #pragma mark searchbar delegate
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -177,7 +177,7 @@
 {
     self.tableMenu.hidden = YES;
     [self.tabBarController setSelectedIndex:2];
-    [self.tabBarController.viewControllers[2] popToRootViewControllerAnimated:YES];
+    [self.tabBarController.viewControllers[2] popToRootViewControllerAnimated:NO];
 }
 
 

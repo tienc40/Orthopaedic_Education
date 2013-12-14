@@ -31,8 +31,9 @@
 
 
 @interface Z115PostListViewController ()
-@property (strong, nonatomic) SSPullToRefreshView *pullToRefreshView;
+@property (nonatomic, strong) SSPullToRefreshView *pullToRefreshView;
 @property (nonatomic, strong) UIView *loadingView;
+@property (nonatomic, strong) Z115PostViewController *postVC;
 @end
 
 @implementation Z115PostListViewController
@@ -150,9 +151,7 @@
         [self.tableView reloadData];
         
     }
-    
     NSLog(@"POST LIST VIEW WILL APPEAR");
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -298,10 +297,9 @@
         return;
     }
     
-    Z115PostViewController *postViewController = [[Z115PostViewController alloc] initWithDataSource:self.dataSource withStartIndex:indexPath.row];
-    postViewController.delegate = self;
-    [self.navigationController pushViewController:postViewController animated:YES];
-
+    self.postVC = [[Z115PostViewController alloc] initWithDataSource:self.dataSource withStartIndex:indexPath.row];
+    self.postVC.delegate = self;
+    [self.navigationController pushViewController:self.postVC animated:YES];
 
 }
 
@@ -331,7 +329,8 @@
     [self searchByText:searchBar.text];
 }
 
-- (IBAction)starButtonTapped:(id)sender {
+- (IBAction)starButtonTapped:(id)sender
+{
     
     Z115StarButton *button = (Z115StarButton *)sender;
    

@@ -113,22 +113,12 @@
 - (void) itemCenterAction
 {
     [self hideAllMenu];
-    //AppDelegate *appdelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    //[appdelegate.tabController setSelectedIndex:2];
-    //[appdelegate.tabController.viewControllers[2] popToRootViewControllerAnimated:YES];
-     NSLog(@"tabbar = %@",[self description]);
+
     [self setSelectedIndex:2];
-    [self.viewControllers[2] popToRootViewControllerAnimated:YES];
+    //[self.viewControllers[2] popToRootViewControllerAnimated:YES];
     
-    [self doSomething];
 
 }
-
-- (void)doSomething
-{
-    NSLog(@"Do Something");
-}
-
 
 - (void) hideAllMenu{
     for (UINavigationController *view in self.viewControllers) {

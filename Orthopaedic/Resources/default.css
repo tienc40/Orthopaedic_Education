@@ -9,6 +9,8 @@ body {
 h1 {
     font-size: 16px;
     font-weight: bold;
+    background:yellow;
+    display:block;
 }
 
 a:link {
@@ -36,7 +38,7 @@ a.author:active {
 }
        
 #singlentry {
-
+    font-size:15px;
 }
 
 img.alignleft, img.alignright, img.aligncenter {

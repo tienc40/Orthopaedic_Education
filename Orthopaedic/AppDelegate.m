@@ -54,7 +54,11 @@
 {
     //[viewController viewWillAppear:YES];
     //[viewController description];
-    NSLog(@"selected");
+    
+    /* if ([viewController isKindOfClass:[UINavigationController class]])
+    {
+        [(UINavigationController *)viewController popToRootViewControllerAnimated:NO];
+    } */
 }
 
 @end
