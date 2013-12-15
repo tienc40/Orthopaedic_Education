@@ -151,7 +151,6 @@
         [self.tableView reloadData];
         
     }
-    NSLog(@"POST LIST VIEW WILL APPEAR");
 }
 
 - (void)didReceiveMemoryWarning

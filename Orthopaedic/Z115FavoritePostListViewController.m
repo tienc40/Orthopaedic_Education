@@ -66,7 +66,7 @@
 {
     
     [super viewWillAppear:animated];
-    NSLog(@"-------------> Changed");
+    [self loadData];
 
 }
 

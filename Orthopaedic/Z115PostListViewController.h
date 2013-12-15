@@ -31,5 +31,7 @@
 - (void)finishedLoad:(BOOL)more;
 - (void)viewPost:(Z115PostTableViewCell *)cell;
 
+
+
 @end
 

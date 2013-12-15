@@ -32,4 +32,6 @@
 - (id)initWithDataSource:(Z115PostListDataSource *)source withStartIndex:(NSInteger)index;
 - (void)loadPost;
 
+- (void)changeFontSizeFromSetting;
+
 @end

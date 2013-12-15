@@ -38,6 +38,7 @@
 @property (strong, nonatomic) UILabel *nextTitleLabel;
 
 @property (assign, nonatomic) CGFloat fontSize;
+@property (assign, nonatomic) BOOL arrowPosition;
 
 @property (strong, nonatomic) UIBarButtonItem *makeCommentButton;
 
@@ -83,16 +84,10 @@
         self.post = source.items[index];
         
         self.fontSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"fontsize"];
-        
         if (!self.fontSize)
         {
-            self.fontSize = 16.0f;
+            self.fontSize = 15.0f;
         }
-        
-        NSLog(@"fontsize = %f",self.fontSize);
-
-        
-        
     }
     return self;
 }
@@ -247,7 +242,19 @@
     [self.view addSubview:self.starButton];
     [self.view bringSubviewToFront:self.starButton];
     
-    self.downButton = [[UIButton alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 140, 34, 44)];
+    
+    self.arrowPosition = [[NSUserDefaults standardUserDefaults] integerForKey:@"arrowpos"] == 1 ? YES : NO;
+    if (!self.arrowPosition)
+    {
+        self.arrowPosition = NO;
+    }
+    NSLog(@"arrow Position = %d",self.arrowPosition);
+    
+    float xPos = 0;
+    if(self.arrowPosition) {
+        xPos = self.view.frame.size.width - 34;
+    }
+    self.downButton = [[UIButton alloc] initWithFrame:CGRectMake(xPos, self.view.frame.size.height - 140, 34, 44)];
     [self.downButton setImage:[UIImage imageNamed:@"down.png"] forState:UIControlStateNormal];
     [self.downButton addTarget:self action:@selector(downButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [self.downButton setAlpha:0.5];
@@ -256,18 +263,34 @@
     
     
     Z115Post *coreDataPost = [Z115Post findFirstByAttribute:@"z115WordPressPostId" withValue:self.post.z115WordPressPostId];
-    
     if(coreDataPost != nil) {
         [self.starButton switchOn];
     }
-    
-  
-    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self changeFontSizeFromSetting];
+    
+    self.arrowPosition = [[NSUserDefaults standardUserDefaults] integerForKey:@"arrowpos"] == 1 ? YES : NO;
+    if (!self.arrowPosition)
+    {
+        self.arrowPosition = NO;
+    }
+    float xPos = 17;
+    if(self.arrowPosition) {
+        xPos = self.view.frame.size.width - 17;
+    }
+    self.downButton.center = CGPointMake(xPos, self.downButton.center.y);
+    
+}
+
+- (void)changeFontSizeFromSetting
+{
+    self.fontSize = [[NSUserDefaults standardUserDefaults] floatForKey:@"fontsize"];
+    [self.webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"changeFontSize('%f')", self.fontSize]];
+
 }
 
 
@@ -500,7 +523,8 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"webView Did finish load");	
+    NSLog(@"webView Did finish load");
+    [self changeFontSizeFromSetting];
 }
 
 - (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {

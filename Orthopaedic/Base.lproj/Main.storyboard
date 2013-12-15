@@ -110,11 +110,20 @@
                                                         <action selector="starButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I2A-pD-AiP"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Jj-6eJ">
+                                                    <rect key="frame" x="10" y="33" width="150" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="0.034153033360000001" blue="0.2271334341" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="starButton" destination="Q8P-kh-FDE" id="zeC-yE-uar"/>
                                             <outlet property="storyComments" destination="UyN-ef-Yll" id="yUz-VC-a9t"/>
+                                            <outlet property="storyDate" destination="J4W-Jj-6eJ" id="5bf-cK-xta"/>
                                             <outlet property="storyImage" destination="W84-bq-kGN" id="PQV-af-lzf"/>
                                             <outlet property="storyTitle" destination="940-ld-CEb" id="SKX-bT-VuB"/>
                                         </connections>
@@ -234,6 +243,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwZ-cq-3eC">
+                                <rect key="frame" x="219" y="40" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Need Help?">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="contactButtonTapped:" destination="q27-6d-MXw" eventType="touchUpInside" id="lG3-Fq-hXe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -279,8 +298,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrow position" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlI-e7-aXu">
-                                <rect key="frame" x="20" y="84" width="111" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrow position (Left | Right)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlI-e7-aXu">
+                                <rect key="frame" x="20" y="84" width="208" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -398,6 +417,12 @@
                     <navigationItem key="navigationItem" title="Orthopaedic Education" id="Wwr-m3-NaD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
+                    <connections>
+                        <outlet property="btnSubmit" destination="2Gk-yU-cDD" id="vdq-l5-eCP"/>
+                        <outlet property="txtEmail" destination="6WK-kl-Aha" id="6eJ-N4-xuD"/>
+                        <outlet property="txtEnquiry" destination="e0d-7g-eZC" id="cOm-UB-1eZ"/>
+                        <outlet property="txtName" destination="8ia-J5-BHW" id="aKV-Pc-QXf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SUn-Ph-Fcm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -587,7 +612,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3x-rt-CCq">
-                                                    <rect key="frame" x="160" y="32" width="150" height="19"/>
+                                                    <rect key="frame" x="160" y="33" width="150" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -603,11 +628,20 @@
                                                         <action selector="starButtonTapped:" destination="WwD-XN-oxG" eventType="touchUpInside" id="GjB-Tp-dHt"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="lcS-Av-FeQ">
+                                                    <rect key="frame" x="10" y="33" width="150" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="1" green="0.034153033360000001" blue="0.2271334341" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="starButton" destination="f1Y-Az-dFT" id="Ide-6s-ebL"/>
                                             <outlet property="storyComments" destination="B3x-rt-CCq" id="mZE-Zq-0Tn"/>
+                                            <outlet property="storyDate" destination="lcS-Av-FeQ" id="ovp-jI-gyW"/>
                                             <outlet property="storyImage" destination="2FI-Qp-bxG" id="bSU-PB-Asl"/>
                                             <outlet property="storyTitle" destination="9bI-Ro-NeU" id="HH7-zC-LLx"/>
                                         </connections>

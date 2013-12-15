@@ -72,9 +72,7 @@
 }
 - (void) settingAction
 {
-    NSLog(@"setting action");
-    [self.tabBarController setSelectedIndex:3];
-    
+    [self.tabBarController setSelectedIndex:1];
 }
 
 

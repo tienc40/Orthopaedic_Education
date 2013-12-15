@@ -27,15 +27,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    
-    // getting an NSInteger
     NSInteger arrowpos = [prefs integerForKey:@"arrowpos"];
-    
-    // getting an Float
     float fontsize = [prefs floatForKey:@"fontsize"];
-    
     [self.fontSizeSlider setValue:fontsize];
     [self.arrowPositionSwitcher setOn:arrowpos];
     

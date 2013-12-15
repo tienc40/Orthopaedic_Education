@@ -18,6 +18,8 @@
     int _paddingWith;
     int _marginSearchbar;
 }
+
+@property (nonatomic, strong) NSString *tmpTitle;
 @end
 
 
@@ -102,6 +104,10 @@
         self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,searchItem, nil];
         
         self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,categoryMenu,nil];
+        
+        if([self.tmpTitle length] != 0) {
+                self.navigationItem.title = self.tmpTitle;
+        }
 
     }];
 }
@@ -146,6 +152,10 @@
     UIBarButtonItem *sb = [[UIBarButtonItem alloc] initWithCustomView:self.searchBar];
     
     self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:self.negativeSpacer,closeBarBtn,sb, nil];
+    
+    
+    
+    self.tmpTitle = self.navigationItem.title;
     self.navigationItem.title = @"";
     
     [self.searchBar becomeFirstResponder];
