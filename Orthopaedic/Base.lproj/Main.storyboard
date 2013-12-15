@@ -210,7 +210,7 @@
             </objects>
             <point key="canvasLocation" x="470" y="57"/>
         </scene>
-        <!--Info View Controller - Orthopaedic Education-->
+        <!--Info View Controller - Welcome-->
         <scene sceneID="rfW-H3-cnZ">
             <objects>
                 <viewController id="q27-6d-MXw" customClass="Z115InfoViewController" sceneMemberID="viewController">
@@ -256,7 +256,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Orthopaedic Education" id="GYU-Fl-c1k"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="GYU-Fl-c1k"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                 </viewController>
@@ -334,7 +334,7 @@
             </objects>
             <point key="canvasLocation" x="1768" y="-212"/>
         </scene>
-        <!--Contact View Controller - Orthopaedic Education-->
+        <!--Contact View Controller - Contact-->
         <scene sceneID="tCC-HK-m5N">
             <objects>
                 <viewController id="U4c-Vw-vTn" customClass="Z115ContactViewController" sceneMemberID="viewController">
@@ -361,11 +361,14 @@
                                 <color key="textColor" red="0.088514073220000003" green="0.25781973409999998" blue="0.46301800269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="16" background="tf.png" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-kl-Aha">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your email address" minimumFontSize="16" background="tf.png" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-kl-Aha">
                                 <rect key="frame" x="22" y="167" width="276" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="U4c-Vw-vTn" id="Z0C-LK-oHu"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9R-lt-LE6">
                                 <rect key="frame" x="22" y="143" width="53" height="21"/>
@@ -381,18 +384,24 @@
                                 <color key="textColor" red="0.088514073220000003" green="0.25781973409999998" blue="0.46301800269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="16" background="tf.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-J5-BHW">
-                                <rect key="frame" x="22" y="105" width="276" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your name" minimumFontSize="16" background="textField.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ia-J5-BHW">
+                                <rect key="frame" x="23" y="105" width="276" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <outlet property="delegate" destination="U4c-Vw-vTn" id="qBk-rv-Pyv"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0d-7g-eZC">
                                 <rect key="frame" x="22" y="228" width="276" height="87"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="U4c-Vw-vTn" id="ukf-Gx-MKQ"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="For more infomation or to apply to become a publisher  please fill in the detail below:" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="273" translatesAutoresizingMaskIntoConstraints="NO" id="Lnc-XF-tCI">
                                 <rect key="frame" x="22" y="22" width="273" height="68"/>
@@ -410,11 +419,14 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="submitTapped:" destination="U4c-Vw-vTn" eventType="touchUpInside" id="UIF-GZ-pOf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Orthopaedic Education" id="Wwr-m3-NaD"/>
+                    <navigationItem key="navigationItem" title="Contact" id="Wwr-m3-NaD"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
@@ -523,7 +535,7 @@
             </objects>
             <point key="canvasLocation" x="1253" y="1872"/>
         </scene>
-        <!--Favorite Post List View Controller - Orthopaedic Education-->
+        <!--Favorite Post List View Controller - Favourite Articles-->
         <scene sceneID="bfO-1q-myi">
             <objects>
                 <viewController id="WwD-XN-oxG" customClass="Z115FavoritePostListViewController" sceneMemberID="viewController">
@@ -674,7 +686,7 @@
                             <constraint firstItem="1qL-HP-Unt" firstAttribute="top" secondItem="Fe4-lb-Ark" secondAttribute="bottom" id="zf1-nd-PGH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Orthopaedic Education" id="3E1-if-0xr"/>
+                    <navigationItem key="navigationItem" title="Favourite Articles" id="3E1-if-0xr"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
@@ -690,6 +702,7 @@
         <image name="default-post-image.png" width="300" height="150"/>
         <image name="star1.png" width="32" height="42"/>
         <image name="submitbtn.png" width="281" height="39"/>
+        <image name="textField.png" width="281" height="40"/>
         <image name="tf.png" width="280" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

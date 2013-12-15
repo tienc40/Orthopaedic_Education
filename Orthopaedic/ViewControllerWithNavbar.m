@@ -140,7 +140,6 @@
 }
 
 #pragma mark right item
-
 - (void) searchBtnAction{
     //[UIView animateWithDuration:0.4 animations:^{
     UIButton *closebtn = [[UIButton alloc]initWithFrame: CGRectMake(0, 0, MENU_WIDTH, 44.0f)];

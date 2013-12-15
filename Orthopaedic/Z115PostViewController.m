@@ -239,6 +239,7 @@
     
     self.starButton = [[Z115StarButton alloc] initWithFrame:CGRectMake(278, 10, 32, 42)];
     [self.starButton addTarget:self action:@selector(starButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [self.starButton setAlpha:0.7];
     [self.view addSubview:self.starButton];
     [self.view bringSubviewToFront:self.starButton];
     
@@ -254,10 +255,10 @@
     if(self.arrowPosition) {
         xPos = self.view.frame.size.width - 34;
     }
-    self.downButton = [[UIButton alloc] initWithFrame:CGRectMake(xPos, self.view.frame.size.height - 140, 34, 44)];
+    self.downButton = [[UIButton alloc] initWithFrame:CGRectMake(xPos, self.view.frame.size.height - 150, 34, 44)];
     [self.downButton setImage:[UIImage imageNamed:@"down.png"] forState:UIControlStateNormal];
     [self.downButton addTarget:self action:@selector(downButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
-    [self.downButton setAlpha:0.5];
+    [self.downButton setAlpha:0.7];
     [self.view addSubview:self.downButton];
     [self.view bringSubviewToFront:self.downButton];
     
