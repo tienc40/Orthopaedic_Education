@@ -361,7 +361,7 @@
                                 <color key="textColor" red="0.088514073220000003" green="0.25781973409999998" blue="0.46301800269999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your email address" minimumFontSize="16" background="tf.png" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-kl-Aha">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="your email address" minimumFontSize="16" background="textField.png" translatesAutoresizingMaskIntoConstraints="NO" id="6WK-kl-Aha">
                                 <rect key="frame" x="22" y="167" width="276" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -703,7 +703,6 @@
         <image name="star1.png" width="32" height="42"/>
         <image name="submitbtn.png" width="281" height="39"/>
         <image name="textField.png" width="281" height="40"/>
-        <image name="tf.png" width="280" height="40"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

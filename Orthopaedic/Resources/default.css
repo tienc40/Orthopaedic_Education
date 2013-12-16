@@ -13,6 +13,10 @@ h1 {
     display:block;
 }
 
+h3.orthopaedic_heading, h3.orthopaedic_heading a {
+    color:#226CA4;
+}
+
 a:link {
     text-decoration: none
 }
